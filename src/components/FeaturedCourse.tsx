@@ -65,10 +65,10 @@ const FeaturedCourse = () => {
             Signature Program for Creative Professionals
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground mb-4">
-            Featured <span className="gradient-text">Course</span>
+            AI for <span className="gradient-text">Creatives</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A top-rated AI program for creative talent
+            The top-rated program empowering creative professionals with AI skills
           </p>
         </AnimatedSection>
 
