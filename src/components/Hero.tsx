@@ -1,11 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Star, CheckCircle, Shield } from "lucide-react";
-import { Link } from "react-router-dom";
+import { ArrowRight, Shield } from "lucide-react";
 import AnimatedBackground from "./AnimatedBackground";
-import defantraLogo from "@/assets/defantra-logo.jpg";
-import xantumLogo from "@/assets/xantum-logo.jpg";
-import srecLogo from "@/assets/srec-logo.jpg";
-import solidarityLogo from "@/assets/solidarity-logo.jpg";
+import TrustedPartners from "./TrustedPartners";
 
 const Hero = () => {
   return (
@@ -58,44 +54,8 @@ const Hero = () => {
             </a>
           </div>
 
-
-          {/* Partner Logos */}
-          <div className="pt-12 animate-fade-up" style={{ animationDelay: '0.3s' }}>
-            <div className="flex items-center justify-center gap-3 mb-6">
-              <div className="h-px w-10 bg-gradient-to-r from-transparent to-white/30" />
-              <p className="text-xs text-white/50 uppercase tracking-[0.2em] font-medium">
-                Trusted Partners
-              </p>
-              <div className="h-px w-10 bg-gradient-to-l from-transparent to-white/30" />
-            </div>
-            
-            <div className="flex flex-wrap items-center justify-center gap-8">
-              <div className="flex flex-col items-center gap-2">
-                <div className="w-16 h-16 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 p-2 flex items-center justify-center overflow-hidden">
-                  <img src={srecLogo} alt="Sri Ramakrishna Engineering College" className="w-full h-full object-contain" />
-                </div>
-                <span className="text-xs text-white/60 text-center max-w-[100px] leading-tight">SREC</span>
-              </div>
-              <div className="flex flex-col items-center gap-2">
-                <div className="w-16 h-16 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 p-2 flex items-center justify-center overflow-hidden">
-                  <img src={xantumLogo} alt="Xantum Computing" className="w-full h-full object-contain" />
-                </div>
-                <span className="text-xs text-white/60 text-center max-w-[100px] leading-tight">Xantum Computing</span>
-              </div>
-              <div className="flex flex-col items-center gap-2">
-                <div className="w-16 h-16 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 p-2 flex items-center justify-center overflow-hidden">
-                  <img src={defantraLogo} alt="Defantra" className="w-full h-full object-contain" />
-                </div>
-                <span className="text-xs text-white/60 text-center max-w-[100px] leading-tight">Defantra</span>
-              </div>
-              <div className="flex flex-col items-center gap-2">
-                <div className="w-16 h-16 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 p-2 flex items-center justify-center overflow-hidden">
-                  <img src={solidarityLogo} alt="Solidarity Foundation" className="w-full h-full object-contain" />
-                </div>
-                <span className="text-xs text-white/60 text-center max-w-[100px] leading-tight">Solidarity Foundation</span>
-              </div>
-            </div>
-          </div>
+          {/* Trusted Partners */}
+          <TrustedPartners />
         </div>
       </div>
     </section>
