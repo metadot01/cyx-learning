@@ -1,21 +1,59 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, Sparkles } from "lucide-react";
+import { useEffect, useState } from "react";
 import AnimatedBackground from "./AnimatedBackground";
 import TrustedPartners from "./TrustedPartners";
 
 const Hero = () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <section className="relative min-h-[90vh] flex items-center pt-24 pb-16 overflow-hidden gradient-hero">
       {/* Animated Background */}
       <AnimatedBackground />
       
-      {/* Decorative orbs */}
-      <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-gradient-to-br from-cyan/20 to-transparent rounded-full blur-[100px] animate-pulse" />
-      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-emerald/15 to-transparent rounded-full blur-[120px]" />
-      <div className="absolute top-1/2 left-1/3 w-[300px] h-[300px] bg-gradient-to-r from-gold/10 to-transparent rounded-full blur-[80px]" />
+      {/* Parallax Decorative orbs */}
+      <div 
+        className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-gradient-to-br from-cyan/20 to-transparent rounded-full blur-[100px] animate-pulse will-change-transform" 
+        style={{ transform: `translateY(${scrollY * 0.3}px)` }}
+      />
+      <div 
+        className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-emerald/15 to-transparent rounded-full blur-[120px] will-change-transform"
+        style={{ transform: `translateY(${scrollY * -0.2}px)` }}
+      />
+      <div 
+        className="absolute top-1/2 left-1/3 w-[300px] h-[300px] bg-gradient-to-r from-gold/10 to-transparent rounded-full blur-[80px] will-change-transform"
+        style={{ transform: `translateY(${scrollY * 0.15}px) translateX(${scrollY * -0.1}px)` }}
+      />
       
-      {/* Grid overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(0,217,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,217,255,0.03)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
+      {/* Parallax floating shapes */}
+      <div 
+        className="absolute top-20 left-20 w-4 h-4 bg-cyan/30 rounded-full will-change-transform"
+        style={{ transform: `translateY(${scrollY * 0.5}px)` }}
+      />
+      <div 
+        className="absolute top-40 right-32 w-3 h-3 bg-emerald/40 rounded-full will-change-transform"
+        style={{ transform: `translateY(${scrollY * 0.4}px)` }}
+      />
+      <div 
+        className="absolute bottom-40 left-1/4 w-2 h-2 bg-gold/50 rounded-full will-change-transform"
+        style={{ transform: `translateY(${scrollY * -0.3}px)` }}
+      />
+      
+      {/* Grid overlay with parallax */}
+      <div 
+        className="absolute inset-0 bg-[linear-gradient(rgba(0,217,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,217,255,0.03)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_100%)] will-change-transform"
+        style={{ transform: `translateY(${scrollY * 0.1}px)` }}
+      />
 
       <div className="section-container relative z-10">
         <div className="max-w-4xl mx-auto text-center">
