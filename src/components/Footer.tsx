@@ -99,7 +99,6 @@ const Footer = () => {
             {/* Trust badges */}
             <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3 text-xs text-white/50">
               <span className="px-2 py-1 rounded bg-white/5 border border-white/10">UK Company</span>
-              <span className="px-2 py-1 rounded bg-white/5 border border-white/10">ISO 27001</span>
               <span className="px-2 py-1 rounded bg-white/5 border border-white/10">GDPR Compliant</span>
             </div>
 
