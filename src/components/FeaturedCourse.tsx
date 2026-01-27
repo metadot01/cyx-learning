@@ -13,8 +13,14 @@ const learningPoints = [
 
 const FeaturedCourse = () => {
   return (
-    <section className="py-20 lg:py-28 relative overflow-hidden bg-background">
-      <div className="absolute inset-0 circuit-pattern opacity-30" />
+    <section className="py-20 lg:py-28 relative overflow-hidden">
+      {/* Animated gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-ocean/5 via-background to-emerald/5 animate-gradient" style={{ backgroundSize: '200% 200%' }} />
+      <div className="absolute inset-0 circuit-pattern" />
+      
+      {/* Floating orbs for visual interest */}
+      <div className="absolute top-20 left-10 w-72 h-72 bg-cyan/10 rounded-full blur-3xl animate-pulse-slow" />
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-emerald/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }} />
       
       <div className="section-container relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -22,7 +28,7 @@ const FeaturedCourse = () => {
           <AnimatedSection animation="slide-left">
             <div className="space-y-6">
               <div className="flex items-center gap-3">
-                <span className="inline-block text-white font-bold text-xs tracking-wider uppercase px-3 py-1.5 bg-gold rounded-full">
+                <span className="inline-block text-white font-bold text-xs tracking-wider uppercase px-3 py-1.5 bg-ocean rounded-full">
                   Featured Course
                 </span>
                 <span className="inline-block text-gold font-bold text-xs tracking-wider uppercase px-3 py-1.5 bg-gold/10 border border-gold/20 rounded-full">
@@ -54,7 +60,7 @@ const FeaturedCourse = () => {
 
           {/* Right Content - What You'll Learn */}
           <AnimatedSection animation="slide-right" delay={200}>
-            <div className="bg-card rounded-2xl border border-border p-8 shadow-card">
+            <div className="bg-card/80 backdrop-blur-sm rounded-2xl border border-border p-8 shadow-card glow-border">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 rounded-xl bg-cyan/10 border border-cyan/20 flex items-center justify-center">
                   <Sparkles className="w-5 h-5 text-cyan" />
@@ -76,7 +82,7 @@ const FeaturedCourse = () => {
                   <span className="px-3 py-1 bg-muted rounded-full">8 modules</span>
                   <span className="px-3 py-1 bg-muted rounded-full">50+ lessons</span>
                   <span className="px-3 py-1 bg-muted rounded-full">Capstone project</span>
-                  <span className="px-3 py-1 bg-ocean/10 text-ocean rounded-full font-medium">Blockchain certificate</span>
+                  <span className="px-3 py-1 bg-cyan/10 text-cyan rounded-full font-medium border border-cyan/20">Blockchain certificate</span>
                 </div>
               </div>
             </div>

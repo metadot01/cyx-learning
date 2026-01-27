@@ -15,7 +15,9 @@ const TransformCTA = () => {
           </h2>
           
           <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
-            Join thousands of organizations building verified skills with CYXOR Learning. Start with a free trial or schedule a personalized demo to see how blockchain-verified, AI-powered learning can deliver measurable ROI for your team.
+            Join thousands of organizations building verified skills with{" "}
+            <span className="text-ocean font-semibold">CYXOR</span>{" "}
+            <span className="text-emerald font-semibold">Learning</span>. Start with a free trial or schedule a personalized demo to see how blockchain-verified, AI-powered learning can deliver measurable ROI for your team.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
