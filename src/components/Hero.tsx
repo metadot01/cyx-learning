@@ -43,7 +43,7 @@ const Hero = () => {
               {" "}You Can Trust
             </h1>
             <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto">
-              Upskill your employees in AI, Digital, and Compliance skills, with every credential securely verified via blockchain.
+              Upskill and reskill your workforce in AI, Digital, and Compliance skills, boosting engagement, improving course completion rates, and maximizing ROI.
             </p>
           </div>
 
