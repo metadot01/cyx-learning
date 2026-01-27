@@ -1,0 +1,8 @@
+[
+  {
+    "_id": "main-menu",
+    "_type": "menu",
+    "title": "AI for Creatives",
+    "_children": ["module-1"]
+  }
+]

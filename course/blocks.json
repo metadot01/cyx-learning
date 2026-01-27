@@ -1,0 +1,42 @@
+[
+  {
+    "_id": "b-intro-text",
+    "_type": "block",
+    "_component": "text",
+    "_parentId": "a-lesson-1-1-intro",
+    "title": "What is Creative AI?",
+    "body": "<p><strong>Creative AI</strong> refers to AI systems designed to assist, augment, or generate creative content.</p>"
+  },
+  {
+    "_id": "b-spectrum-narrative",
+    "_type": "block",
+    "_component": "narrative",
+    "_parentId": "a-lesson-1-1-spectrum",
+    "title": "The Creative Spectrum",
+    "_items": [
+      { "title": "Human-Made", "body": "Created entirely by humans using traditional tools." },
+      { "title": "AI-Assisted", "body": "Humans lead the creative process with AI support." },
+      { "title": "AI-Generated", "body": "AI produces content based on prompts and parameters." }
+    ],
+    "_setCompletionOn": "allItems"
+  },
+  {
+    "_id": "b-knowledge-check",
+    "_type": "block",
+    "_component": "mcq",
+    "_parentId": "a-lesson-1-1-check",
+    "title": "Knowledge Check",
+    "_items": [
+      {
+        "text": "Which best describes the augmentation mindset?",
+        "_answers": [
+          { "text": "AI replaces human creativity", "_isCorrect": false },
+          { "text": "AI augments human creativity", "_isCorrect": true },
+          { "text": "AI is only for automation", "_isCorrect": false }
+        ]
+      }
+    ],
+    "_attempts": 2,
+    "_scoreToPass": 1
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "module-1",
+    "_type": "page",
+    "_parentId": "main-menu",
+    "title": "Module 1: Introduction to Creative AI",
+    "_children": ["co-lesson-1-1"]
+  },
+  {
+    "_id": "co-lesson-1-1",
+    "_type": "page",
+    "_parentId": "module-1",
+    "title": "Lesson 1.1: What is Creative AI?",
+    "_children": [
+      "a-lesson-1-1-intro",
+      "a-lesson-1-1-spectrum",
+      "a-lesson-1-1-check"
+    ]
+  }
+]
