@@ -13,6 +13,9 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -47,16 +50,16 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
-        },
+        // Trust Tech Brand Colors
+        ocean: "hsl(var(--ocean-blue))",
+        cyan: "hsl(var(--electric-cyan))",
+        emerald: "hsl(var(--emerald-green))",
+        navy: "hsl(var(--space-navy))",
+        slate: "hsl(var(--slate-gray))",
+        soft: "hsl(var(--soft-white))",
+        gold: "hsl(var(--amber-gold))",
+        orange: "hsl(var(--sunset-orange))",
+        lavender: "hsl(var(--lavender-purple))",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -65,25 +68,24 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      boxShadow: {
+        'card': '0 4px 20px hsla(189, 100%, 50%, 0.1)',
+        'card-hover': '0 8px 30px hsla(189, 100%, 50%, 0.2)',
+        'verified': '0 0 20px hsla(165, 100%, 39%, 0.3)',
+        'cta': '0 4px 14px hsla(165, 100%, 39%, 0.35)',
+        'cta-hover': '0 6px 20px hsla(165, 100%, 39%, 0.5)',
       },
     },
   },
