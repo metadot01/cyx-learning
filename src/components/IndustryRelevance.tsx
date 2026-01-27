@@ -3,19 +3,19 @@ import { Building2, Heart, Landmark, Server, ArrowRight, CheckCircle } from "luc
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
 
 const categories = [
-  { id: "all", label: "All Industries" },
-  { id: "finance", label: "Finance" },
-  { id: "healthcare", label: "Healthcare" },
-  { id: "government", label: "Government" },
-  { id: "infrastructure", label: "Infrastructure" },
+  { id: "all", label: "All Solutions" },
+  { id: "upskilling", label: "Upskilling" },
+  { id: "custom", label: "Custom eLearning" },
+  { id: "gamification", label: "Gamification" },
+  { id: "compliance", label: "Compliance" },
 ];
 
 const industries = [
   {
     icon: Building2,
-    title: "Financial Services & Banking",
-    category: "finance",
-    items: ["FCA SM&CR Compliance", "ISO 27001 for FSI", "GDPR for Banking", "AI Risk Management"],
+    title: "Corporate Training & Upskilling",
+    category: "upskilling",
+    items: ["500+ courses in AI & Digital Skills", "Custom learning paths aligned to goals", "Blockchain-verified certificates", "Mobile-first microlearning (5-15 min)"],
     href: "https://cyxorlearning.com/complianceskills",
     color: "from-ocean/10 to-ocean/5",
     iconColor: "text-ocean",
@@ -23,9 +23,9 @@ const industries = [
   },
   {
     icon: Heart,
-    title: "Healthcare & Life Sciences",
-    category: "healthcare",
-    items: ["GDPR for Healthcare", "NIS2 for Health Systems", "Care Quality Commission", "Medical Device Regulation"],
+    title: "Custom eLearning Development",
+    category: "custom",
+    items: ["Needs analysis & instructional design", "Interactive gamification elements", "SCORM/xAPI for any LMS", "Blockchain certificate implementation"],
     href: "https://cyxorlearning.com/complianceskills",
     color: "from-emerald/10 to-emerald/5",
     iconColor: "text-emerald",
@@ -33,23 +33,23 @@ const industries = [
   },
   {
     icon: Landmark,
-    title: "Government & Public Sector",
-    category: "government",
-    items: ["Cyber Essentials Plus", "ISO 27001:2022", "UK GDPR Article 30", "NIS2 Directive"],
-    href: "https://cyxorlearning.com/complianceskills",
-    color: "from-slate/10 to-slate/5",
-    iconColor: "text-slate",
-    iconBg: "bg-slate/10 border-slate/20",
-  },
-  {
-    icon: Server,
-    title: "Critical Infrastructure",
-    category: "infrastructure",
-    items: ["NIS2 for Operators", "OT Security Training", "ISO 27001 for CNI", "Incident Response"],
+    title: "Gamified Learning Platform",
+    category: "gamification",
+    items: ["Badges, leaderboards & challenges", "40% higher engagement rates", "50% better completion rates", "Social features for peer learning"],
     href: "https://cyxorlearning.com/complianceskills",
     color: "from-gold/10 to-gold/5",
     iconColor: "text-gold",
     iconBg: "bg-gold/10 border-gold/20",
+  },
+  {
+    icon: Server,
+    title: "Compliance & Verification",
+    category: "compliance",
+    items: ["Tamper-proof blockchain credentials", "One-click QR code verification", "Automated audit trail reports", "Real-time compliance dashboard"],
+    href: "https://cyxorlearning.com/complianceskills",
+    color: "from-cyan/10 to-cyan/5",
+    iconColor: "text-cyan",
+    iconBg: "bg-cyan/10 border-cyan/20",
   },
 ];
 
@@ -67,14 +67,14 @@ const IndustryRelevance = () => {
       <div className="section-container relative z-10">
         <AnimatedSection className="text-center mb-12 lg:mb-16">
           <span className="inline-block text-white font-bold text-sm tracking-wider uppercase mb-4 px-4 py-2 bg-ocean rounded-full">
-            Industries We Serve
+            Solutions That Deliver
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground mt-4 mb-4 leading-tight">
-            Courses Designed for{" "}
-            <span className="text-emerald">Highly Regulated Industries</span>
+            Training Solutions with{" "}
+            <span className="text-emerald">Measurable ROI</span>
           </h2>
           <p className="text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Customizable training solutions that actually get completed
+            95% completion rate vs 15% industry average—powered by AI, gamification & blockchain verification
           </p>
         </AnimatedSection>
 
