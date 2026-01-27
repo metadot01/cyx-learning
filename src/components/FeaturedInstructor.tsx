@@ -13,16 +13,18 @@ const expertise = [
 
 const FeaturedInstructor = () => {
   return (
-    <section className="py-20 lg:py-28 gradient-section">
-      <div className="section-container">
+    <section className="py-20 lg:py-28 relative overflow-hidden bg-card">
+      {/* Subtle background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-cyan/5 via-transparent to-emerald/5" />
+      
+      <div className="section-container relative z-10">
         <AnimatedSection className="text-center mb-10">
           <span className="inline-block text-white font-bold text-sm tracking-wider uppercase mb-4 px-4 py-2 bg-ocean rounded-full">
-            Our Experts
+            Meet Your Instructor
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-foreground leading-tight">
-            Course
-            <br />
-            <span className="text-emerald">Instructor</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground leading-tight mt-4">
+            Learn from{" "}
+            <span className="text-emerald">Industry Experts</span>
           </h2>
         </AnimatedSection>
 
