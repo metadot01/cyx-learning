@@ -76,7 +76,7 @@ const WhyChooseCyxor = () => {
             Platform Capabilities
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground mt-4 mb-4 leading-tight">
-            Why Leading Organizations Choose{" "}
+            Why Choose{" "}
             <span className="text-ocean">CYXOR</span>{" "}
             <span className="text-emerald">Learning</span>
           </h2>
