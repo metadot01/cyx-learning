@@ -8,6 +8,8 @@ import Testimonials from "@/components/Testimonials";
 import FeaturedInstructor from "@/components/FeaturedInstructor";
 import TransformCTA from "@/components/TransformCTA";
 import Footer from "@/components/Footer";
+import BackToTop from "@/components/BackToTop";
+
 
 const Index = () => {
   return (
@@ -24,6 +26,7 @@ const Index = () => {
         <TransformCTA />
       </main>
       <Footer />
+      <BackToTop />
     </div>
   );
 };
