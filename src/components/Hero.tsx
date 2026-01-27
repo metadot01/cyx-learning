@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Shield } from "lucide-react";
+import { ArrowRight, Shield, Sparkles } from "lucide-react";
 import AnimatedBackground from "./AnimatedBackground";
 import TrustedPartners from "./TrustedPartners";
 
@@ -20,10 +20,14 @@ const Hero = () => {
       <div className="section-container relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Trust Badge - Overline */}
-          <div className="animate-fade-up" style={{ animationDelay: '0.05s' }}>
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm text-sm text-white/90 font-medium mb-6">
+          <div className="flex flex-wrap items-center justify-center gap-3 animate-fade-up" style={{ animationDelay: '0.05s' }}>
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm text-sm text-white/90 font-medium">
               <Shield className="w-4 h-4 text-emerald" />
               Blockchain-verified certificates
+            </span>
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm text-sm text-white/90 font-medium">
+              <Sparkles className="w-4 h-4 text-cyan" />
+              AI-Powered personalization
             </span>
           </div>
 
