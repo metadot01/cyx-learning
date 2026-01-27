@@ -14,7 +14,7 @@ const Footer = () => {
           {/* Column 1: Company + Newsletter */}
           <div className="col-span-2 lg:col-span-1">
             <div className="flex items-center mb-4">
-              <span className="text-xl font-bold tracking-tight text-white">CYXOR</span>
+              <span className="text-xl font-bold tracking-tight text-cyan">CYXOR</span>
               <span className="text-xl font-bold ml-1.5 text-emerald">LEARNING</span>
             </div>
             <p className="text-sm text-white/60 mb-6">
