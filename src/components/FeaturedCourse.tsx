@@ -62,13 +62,13 @@ const FeaturedCourse = () => {
         <AnimatedSection animation="fade-up" className="text-center mb-16">
           <span className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-emerald/10 to-cyan/10 border border-emerald/20 rounded-full text-sm font-semibold text-emerald mb-6">
             <Award className="w-4 h-4" />
-            Signature Program
+            Signature Program for Creative Professionals
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground mb-4">
             Featured <span className="gradient-text">Course</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Our most popular program designed for creative professionals ready to master AI
+            A top-rated AI program for creative talent
           </p>
         </AnimatedSection>
 
