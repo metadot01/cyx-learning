@@ -91,7 +91,7 @@ const Testimonials = () => {
 
         <AnimatedSection className="text-center mt-10">
           <p className="text-muted-foreground">
-            Join <span className="text-emerald font-semibold">10,000+ professionals</span> who've upskilled with <span className="text-ocean font-semibold">CYXOR</span> <span className="text-emerald font-semibold">LEARNING</span>
+            Join <span className="text-emerald font-semibold">1,300+ professionals</span> who've upskilled with <span className="text-ocean font-semibold">CYXOR</span> <span className="text-emerald font-semibold">LEARNING</span>
           </p>
         </AnimatedSection>
       </div>
