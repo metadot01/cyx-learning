@@ -4,7 +4,6 @@ import StatsBar from "@/components/StatsBar";
 import IndustryRelevance from "@/components/IndustryRelevance";
 import WhyChooseCyxor from "@/components/WhyChooseCyxor";
 import Testimonials from "@/components/Testimonials";
-import HowItWorks from "@/components/HowItWorks";
 import DualCTA from "@/components/DualCTA";
 import FeaturedInstructor from "@/components/FeaturedInstructor";
 import Footer from "@/components/Footer";
@@ -19,7 +18,6 @@ const Index = () => {
         <IndustryRelevance />
         <WhyChooseCyxor />
         <Testimonials />
-        <HowItWorks />
         <DualCTA />
         <FeaturedInstructor />
       </main>
