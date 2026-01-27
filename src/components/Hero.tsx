@@ -52,7 +52,7 @@ const Hero = () => {
           <div className="flex items-center justify-center mt-10 animate-fade-up" style={{ animationDelay: '0.2s' }}>
             <a href="https://cyxorlearning.com/technologyskills" target="_blank" rel="noopener noreferrer">
               <Button variant="hero" size="lg" className="text-base px-8 h-12 shadow-[0_0_40px_rgba(0,200,150,0.3)] hover:shadow-[0_0_60px_rgba(0,200,150,0.5)] transition-all duration-300 group">
-                Upskill Your Team
+                Upskill/Reskill Your Team
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </a>
