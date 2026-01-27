@@ -92,7 +92,7 @@ const Hero = () => {
               {" "}You Can Trust
             </h1>
             <p className="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
-              Upskill and reskill your workforce in AI, Digital, and Compliance skills—boosting engagement, improving completion rates, and maximizing ROI.
+              Transform your workforce with AI, digital, and compliance upskilling - unlock higher engagement, better completion rates, and measurable ROI.
             </p>
           </div>
 
