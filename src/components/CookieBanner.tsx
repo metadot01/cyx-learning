@@ -26,7 +26,7 @@ const CookieBanner = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 p-4 bg-navy/95 backdrop-blur-sm border-t border-white/10">
+    <div className="fixed bottom-0 left-0 right-0 z-50 p-4 bg-navy/95 backdrop-blur-sm border-t border-cyan/20">
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         <p className="text-sm text-white/80 text-center sm:text-left">
           We use cookies to enhance your experience.{" "}
@@ -44,7 +44,7 @@ const CookieBanner = () => {
             Decline
           </Button>
           <Button
-            variant="cyan"
+            variant="hero"
             size="sm"
             onClick={handleAccept}
           >
