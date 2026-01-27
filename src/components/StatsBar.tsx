@@ -14,7 +14,7 @@ const stats = [
   { 
     value: "4.9/5", 
     label: "Average Rating", 
-    sublabel: "2,300+ reviews",
+    sublabel: "1,300+ reviews",
     color: "text-gold",
     bgColor: "bg-gold/10",
     borderColor: "border-gold/20",
