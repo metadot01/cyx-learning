@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "ttps://metadot01.github.io/cyx-learning/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
