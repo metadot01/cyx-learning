@@ -82,7 +82,7 @@ const FeaturedCourse = () => {
           </h2>
           
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-6">
-            Join <span className="font-bold text-foreground">1,300+ creative professionals</span> who transformed their careers with AI-powered skills
+            Join <span className="font-bold text-foreground">1,300+ professionals</span> with AI skills who transformed their careers
           </p>
 
           {/* Social proof stats */}
