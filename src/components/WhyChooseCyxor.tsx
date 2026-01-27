@@ -9,6 +9,7 @@ const features = [
     items: ["Adaptive learning paths", "95% accuracy in style identification", "75% training time savings", "Personalized recommendations"],
     color: "text-cyan",
     bgColor: "bg-cyan/10",
+    borderColor: "border-cyan/20",
   },
   {
     icon: Shield,
@@ -17,6 +18,7 @@ const features = [
     items: ["Tamper-proof verification", "One-click QR validation", "Lifetime credential access", "Eliminates credential fraud"],
     color: "text-ocean",
     bgColor: "bg-ocean/10",
+    borderColor: "border-ocean/20",
   },
   {
     icon: Trophy,
@@ -26,6 +28,7 @@ const features = [
     items: ["Progressive achievements", "Team leaderboards", "Daily challenges", "Streak rewards"],
     color: "text-gold",
     bgColor: "bg-gold/10",
+    borderColor: "border-gold/20",
   },
   {
     icon: Smartphone,
@@ -34,6 +37,7 @@ const features = [
     items: ["5-15 minute microlearning", "Offline access available", "Cross-device sync", "Learn during downtime"],
     color: "text-emerald",
     bgColor: "bg-emerald/10",
+    borderColor: "border-emerald/20",
   },
   {
     icon: BarChart3,
@@ -42,21 +46,29 @@ const features = [
     items: ["Real-time dashboards", "ROI calculators", "Skill gap analysis", "Compliance reporting"],
     color: "text-lavender",
     bgColor: "bg-lavender/10",
+    borderColor: "border-lavender/20",
   },
   {
     icon: Plug,
     title: "LMS Integration",
     description: "Seamlessly integrate with your existing LMS via SCORM 2004, xAPI, or direct API connections.",
     items: ["SCORM 2004 compatible", "xAPI support", "Direct API access", "White-label options"],
-    color: "text-slate",
-    bgColor: "bg-slate/10",
+    color: "text-cyan",
+    bgColor: "bg-cyan/10",
+    borderColor: "border-cyan/20",
   },
 ];
 
 const WhyChooseCyxor = () => {
   return (
-    <section className="py-20 lg:py-28 gradient-section relative overflow-hidden">
+    <section className="py-20 lg:py-28 relative overflow-hidden">
+      {/* Animated gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-ocean/5 via-background to-cyan/5" />
       <div className="absolute inset-0 circuit-pattern" />
+      
+      {/* Decorative elements */}
+      <div className="absolute top-10 right-10 w-64 h-64 bg-emerald/10 rounded-full blur-3xl animate-pulse-slow" />
+      <div className="absolute bottom-10 left-10 w-80 h-80 bg-cyan/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '1s' }} />
       
       <div className="section-container relative z-10">
         <AnimatedSection className="text-center mb-12 lg:mb-16">
@@ -73,44 +85,40 @@ const WhyChooseCyxor = () => {
           </p>
         </AnimatedSection>
 
-        <div className="space-y-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {features.map((feature, index) => (
             <AnimatedSection
               key={feature.title}
               delay={index * 100}
-              animation={index % 2 === 0 ? "slide-left" : "slide-right"}
+              animation="fade-up"
             >
-              <div className={`group relative bg-card rounded-2xl p-6 lg:p-8 border border-border hover:border-cyan/30 transition-all duration-300 hover:shadow-card-hover ${
-                index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
-              } flex flex-col lg:flex gap-6`}>
-                {/* Icon Section */}
-                <div className="flex-shrink-0 flex lg:flex-col items-center lg:items-start gap-4">
-                  <div className={`w-16 h-16 rounded-2xl ${feature.bgColor} flex items-center justify-center border border-${feature.color.replace('text-', '')}/20 group-hover:scale-105 transition-transform`}>
-                    <feature.icon className={`w-8 h-8 ${feature.color}`} />
-                  </div>
+              <div className={`group relative p-6 rounded-2xl bg-card/80 backdrop-blur-sm border ${feature.borderColor} hover:border-cyan/40 transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1 h-full`}>
+                {/* Icon */}
+                <div className={`w-14 h-14 rounded-xl ${feature.bgColor} flex items-center justify-center mb-4 border ${feature.borderColor} group-hover:scale-110 transition-transform`}>
+                  <feature.icon className={`w-7 h-7 ${feature.color}`} />
                 </div>
 
-                {/* Content Section */}
-                <div className="flex-1">
-                  <h3 className="text-xl lg:text-2xl font-bold text-foreground mb-2">
-                    {feature.title}
-                  </h3>
-                  {feature.highlight && (
-                    <p className={`text-sm font-bold ${feature.color} mb-2`}>
-                      {feature.highlight}
-                    </p>
-                  )}
-                  <p className="text-muted-foreground mb-4 leading-relaxed">
-                    {feature.description}
+                {/* Content */}
+                <h3 className="text-lg font-bold text-foreground mb-1">
+                  {feature.title}
+                </h3>
+                {feature.highlight && (
+                  <p className={`text-xs font-bold ${feature.color} mb-2`}>
+                    {feature.highlight}
                   </p>
-                  <div className="grid sm:grid-cols-2 gap-2">
-                    {feature.items.map((item) => (
-                      <div key={item} className="flex items-center gap-2 text-sm text-muted-foreground">
-                        <CheckCircle className={`w-4 h-4 ${feature.color} flex-shrink-0`} />
-                        {item}
-                      </div>
-                    ))}
-                  </div>
+                )}
+                <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+                  {feature.description}
+                </p>
+                
+                {/* Items */}
+                <div className="space-y-2">
+                  {feature.items.slice(0, 3).map((item) => (
+                    <div key={item} className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <CheckCircle className={`w-4 h-4 ${feature.color} flex-shrink-0`} />
+                      {item}
+                    </div>
+                  ))}
                 </div>
               </div>
             </AnimatedSection>
