@@ -34,17 +34,16 @@ const Hero = () => {
           {/* Main Heading */}
           <div className="space-y-6 animate-fade-up" style={{ animationDelay: '0.1s' }}>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-[1.1] tracking-tight text-center">
-              Build a{" "}
               <span className="relative inline-block text-emerald drop-shadow-[0_0_30px_rgba(0,200,150,0.5)]">
-                Skilled
+                Interactive AI Learning
                 <svg className="absolute -bottom-2 left-0 w-full h-3 text-emerald/60" viewBox="0 0 100 12" preserveAspectRatio="none">
                   <path d="M0 8 Q25 2 50 8 T100 8" stroke="currentColor" strokeWidth="3" fill="none" strokeLinecap="round" />
                 </svg>
               </span>
-              {" "}Workforce You Can Trust
+              {" "}You Can Trust
             </h1>
             <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto">
-              Upskill your employees in AI, Digital, and Compliance skills, with every credential securely verified via blockchain.
+              Upskill and reskill your workforce in AI, Digital, and Compliance skills, boosting engagement, improving course completion rates, and maximizing ROI.
             </p>
           </div>
 
@@ -53,7 +52,7 @@ const Hero = () => {
           <div className="flex items-center justify-center mt-10 animate-fade-up" style={{ animationDelay: '0.2s' }}>
             <a href="https://cyxorlearning.com/technologyskills" target="_blank" rel="noopener noreferrer">
               <Button variant="hero" size="lg" className="text-base px-8 h-12 shadow-[0_0_40px_rgba(0,200,150,0.3)] hover:shadow-[0_0_60px_rgba(0,200,150,0.5)] transition-all duration-300 group">
-                Build Your Trusted Team Now
+                Upskill/Reskill Your Team
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </a>
