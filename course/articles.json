@@ -1,0 +1,23 @@
+[
+  {
+    "_id": "a-lesson-1-1-intro",
+    "_type": "article",
+    "_parentId": "co-lesson-1-1",
+    "title": "Understanding Creative AI",
+    "_children": ["b-intro-text"]
+  },
+  {
+    "_id": "a-lesson-1-1-spectrum",
+    "_type": "article",
+    "_parentId": "co-lesson-1-1",
+    "title": "The Creative Spectrum",
+    "_children": ["b-spectrum-narrative"]
+  },
+  {
+    "_id": "a-lesson-1-1-check",
+    "_type": "article",
+    "_parentId": "co-lesson-1-1",
+    "title": "Knowledge Check",
+    "_children": ["b-knowledge-check"]
+  }
+]
