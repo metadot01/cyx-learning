@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Sparkles, Image, FileText, Music, Video, Layers, Scale, ArrowRight, CheckCircle, Share2, Link, Check, Award, Clock, BookOpen } from "lucide-react";
+import { Sparkles, Image, FileText, Music, Video, Layers, Scale, ArrowRight, CheckCircle, Share2, Link, Check, Award, Clock, BookOpen, Star, Users, TrendingUp, Zap } from "lucide-react";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
 import { Button } from "@/components/ui/button";
 import AICreativeDemo from "@/components/AICreativeDemo";
@@ -59,18 +59,54 @@ const FeaturedCourse = () => {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-cyan/5 to-emerald/5 rounded-full blur-3xl" />
       
       <div className="section-container relative z-10">
-        {/* Section Header */}
-        <AnimatedSection animation="fade-up" className="text-center mb-16">
-          <span className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-emerald/10 to-cyan/10 border border-emerald/20 rounded-full text-sm font-semibold text-emerald mb-6">
-            <Award className="w-4 h-4" />
-            Signature Program for Creative Professionals
-          </span>
+        {/* Section Header - High Conversion Focus */}
+        <AnimatedSection animation="fade-up" className="text-center mb-12">
+          {/* Trust badges row */}
+          <div className="flex flex-wrap items-center justify-center gap-4 mb-6">
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-emerald/10 to-cyan/10 border border-emerald/20 rounded-full text-sm font-semibold text-emerald">
+              <Award className="w-4 h-4" />
+              Signature Program
+            </span>
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gold/10 border border-gold/20 rounded-full text-xs font-bold text-gold">
+              <Star className="w-3.5 h-3.5 fill-gold" />
+              4.9/5 from 1,300+ reviews
+            </span>
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-cyan/10 border border-cyan/20 rounded-full text-xs font-bold text-cyan animate-pulse">
+              <Zap className="w-3.5 h-3.5" />
+              Limited Spots Available
+            </span>
+          </div>
+
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground mb-4">
             AI for <span className="gradient-text">Creatives</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            The top-rated program empowering creative professionals with AI skills
+          
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-6">
+            Join <span className="font-bold text-foreground">1,300+ creative professionals</span> who transformed their careers with AI-powered skills
           </p>
+
+          {/* Social proof stats */}
+          <div className="flex flex-wrap items-center justify-center gap-6 text-sm">
+            <div className="flex items-center gap-2 text-muted-foreground">
+              <div className="flex -space-x-2">
+                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-cyan to-emerald border-2 border-background flex items-center justify-center text-xs font-bold text-white">J</div>
+                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-emerald to-gold border-2 border-background flex items-center justify-center text-xs font-bold text-white">S</div>
+                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-gold to-orange border-2 border-background flex items-center justify-center text-xs font-bold text-white">M</div>
+                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-lavender to-cyan border-2 border-background flex items-center justify-center text-xs font-bold text-white">+</div>
+              </div>
+              <span>Joined this week</span>
+            </div>
+            <div className="hidden sm:block w-px h-6 bg-border" />
+            <div className="flex items-center gap-2 text-emerald font-semibold">
+              <TrendingUp className="w-4 h-4" />
+              <span>92% completion rate</span>
+            </div>
+            <div className="hidden sm:block w-px h-6 bg-border" />
+            <div className="flex items-center gap-2 text-muted-foreground">
+              <Users className="w-4 h-4" />
+              <span>Active community</span>
+            </div>
+          </div>
         </AnimatedSection>
 
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
