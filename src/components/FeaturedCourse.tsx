@@ -27,18 +27,18 @@ const FeaturedCourse = () => {
           {/* Left Content */}
           <AnimatedSection animation="slide-left">
             <div className="space-y-6">
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 flex-wrap">
                 <span className="inline-block text-white font-bold text-xs tracking-wider uppercase px-3 py-1.5 bg-ocean rounded-full">
                   Featured Course
                 </span>
-                <span className="inline-block text-gold font-bold text-xs tracking-wider uppercase px-3 py-1.5 bg-gold/10 border border-gold/20 rounded-full">
+                <span className="inline-block text-emerald font-bold text-xs tracking-wider uppercase px-3 py-1.5 bg-emerald/10 border border-emerald/20 rounded-full">
                   30-Hour Certificate
                 </span>
               </div>
               
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground leading-tight">
-                Creative AI for{" "}
-                <span className="text-emerald">Professionals</span>
+                AI for{" "}
+                <span className="text-emerald">Creative Professionals</span>
               </h2>
               
               <p className="text-lg text-muted-foreground leading-relaxed">

@@ -27,8 +27,12 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="py-20 lg:py-28 bg-card border-y border-border">
-      <div className="section-container">
+    <section className="py-20 lg:py-28 relative overflow-hidden bg-card border-y border-border">
+      {/* Subtle background decoration */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-cyan/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-emerald/5 rounded-full blur-3xl" />
+      
+      <div className="section-container relative z-10">
         <AnimatedSection className="text-center mb-12">
           <span className="inline-block text-white font-bold text-sm tracking-wider uppercase mb-4 px-4 py-2 bg-ocean rounded-full">
             Client Success

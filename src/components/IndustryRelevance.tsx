@@ -47,7 +47,9 @@ const solutions = [
 
 const IndustryRelevance = () => {
   return (
-    <section id="industries" className="py-20 lg:py-28 relative scroll-mt-24 bg-soft">
+    <section id="industries" className="py-20 lg:py-28 relative scroll-mt-24">
+      {/* Background with gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-ocean/5 to-background" />
       <div className="absolute inset-0 blockchain-grid" />
       
       <div className="section-container relative z-10">
