@@ -71,3 +71,98 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+
+---
+
+## Adapt Learning Course: AI for Creatives
+
+This repository includes an Adapt Learning-compatible course in the `/course` directory.
+
+### About the Course
+
+**AI for Creatives** is a comprehensive course designed to teach creative professionals how to leverage AI tools in their workflows. The course covers:
+
+- Understanding Creative AI and the augmentation mindset
+- Image, text, audio, and video generation with AI
+- Advanced techniques including GANs, style transfer, and fine-tuning
+- Ethics, copyright, and business strategy for AI
+
+### Course Structure
+
+The `/course` folder contains Adapt Learning JSON content files:
+
+| File | Description |
+|------|-------------|
+| `course.json` | Main course configuration and global settings |
+| `contentObjects.json` | Menu and page definitions (modules, lessons) |
+| `articles.json` | Article containers within pages |
+| `blocks.json` | Block containers within articles |
+| `components.json` | Interactive components (text, narratives, MCQs) |
+| `menus.json` | Menu configuration |
+
+### How to Use with Adapt Framework
+
+This course content is designed to work with the official [Adapt Learning Framework](https://github.com/adaptlearning/adapt_framework). The framework itself is **not included** in this repository and should be cloned separately.
+
+#### Setup Steps
+
+1. **Clone the Adapt Framework** (in a separate directory):
+   ```bash
+   git clone https://github.com/adaptlearning/adapt_framework.git
+   cd adapt_framework
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Install required plugins** (the course uses these components):
+   ```bash
+   adapt install adapt-contrib-text
+   adapt install adapt-contrib-narrative
+   adapt install adapt-contrib-mcq
+   adapt install adapt-contrib-pageLevelProgress
+   ```
+
+4. **Copy the course content**:
+   ```bash
+   # From the adapt_framework directory
+   cp -r /path/to/this-repo/course/* src/course/
+   ```
+
+5. **Build and run**:
+   ```bash
+   # Build the course
+   grunt build
+   
+   # Or run development server
+   grunt server
+   ```
+
+6. **View the course**: Open `http://localhost:9001` in your browser.
+
+### Course Content Overview (Module 1)
+
+**Module 1: Introduction to Creative AI**
+- Lesson 1.1: What is Creative AI?
+  - Text component explaining Creative AI and the augmentation mindset
+  - Narrative component exploring the creative spectrum (human-made, AI-assisted, AI-generated)
+  - MCQ knowledge check to test understanding
+
+### Extending the Course
+
+To add more modules and lessons:
+
+1. Add new content objects in `contentObjects.json` with appropriate `_parentId` references
+2. Create corresponding articles in `articles.json`
+3. Add blocks in `blocks.json`
+4. Define components in `components.json`
+
+Ensure all `_id` values are unique and `_parentId` values correctly reference parent elements.
+
+### Resources
+
+- [Adapt Learning Documentation](https://github.com/adaptlearning/adapt_framework/wiki)
+- [Adapt Component Library](https://github.com/adaptlearning?q=adapt-contrib)
+- [Adapt Authoring Tool](https://github.com/adaptlearning/adapt_authoring) (optional GUI for content creation)
