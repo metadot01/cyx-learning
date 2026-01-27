@@ -60,7 +60,7 @@ const Footer = () => {
               <li><a href="https://cyxorlearning.com/courses/" target="_blank" rel="noopener noreferrer" className="hover:text-cyan transition-colors">Browse Courses</a></li>
               <li><Link to="/solutions" className="hover:text-cyan transition-colors">Corporate Upskilling</Link></li>
               <li><Link to="/solutions" className="hover:text-cyan transition-colors">Custom eLearning</Link></li>
-              <li><Link to="/solutions" className="hover:text-cyan transition-colors">Gamified Platform</Link></li>
+              <li><Link to="/solutions" className="hover:text-cyan transition-colors">Gamified Engine</Link></li>
               <li><Link to="/solutions" className="hover:text-cyan transition-colors">Compliance Training</Link></li>
               <li><a href="#" className="hover:text-cyan transition-colors">Verify Certificate</a></li>
             </ul>
