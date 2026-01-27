@@ -181,17 +181,21 @@ const Header = () => {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border/50 shadow-sm">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-background backdrop-blur-md border-b border-border/50 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
-            <Link to="/" className="flex items-center flex-shrink-0">
+            <Link to="/" className="flex items-center flex-shrink-0 gap-2">
               <img 
                 src={cyxorLogo} 
                 alt="CYXOR Learning" 
                 className="h-10 sm:h-11 lg:h-12 w-auto mix-blend-multiply dark:mix-blend-screen dark:brightness-0 dark:invert"
                 style={{ backgroundColor: 'transparent' }}
               />
+              <div className="hidden sm:flex items-center">
+                <span className="text-lg font-bold text-ocean drop-shadow-[0_0_8px_rgba(10,36,99,0.3)]">CYXOR</span>
+                <span className="text-lg font-bold text-emerald ml-1 drop-shadow-[0_0_8px_rgba(0,200,150,0.3)]">Learning</span>
+              </div>
             </Link>
 
             {/* Desktop Navigation */}
