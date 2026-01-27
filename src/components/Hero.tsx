@@ -6,14 +6,25 @@ import TrustedPartners from "./TrustedPartners";
 
 const Hero = () => {
   const [scrollY, setScrollY] = useState(0);
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
     };
 
+    const handleMouseMove = (e: MouseEvent) => {
+      const x = (e.clientX / window.innerWidth - 0.5) * 2;
+      const y = (e.clientY / window.innerHeight - 0.5) * 2;
+      setMousePos({ x, y });
+    };
+
     window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("mousemove", handleMouseMove, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
   }, []);
 
   return (
@@ -21,32 +32,32 @@ const Hero = () => {
       {/* Animated Background */}
       <AnimatedBackground />
       
-      {/* Parallax Decorative orbs */}
+      {/* Parallax + Mouse-follow Decorative orbs */}
       <div 
-        className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-gradient-to-br from-cyan/20 to-transparent rounded-full blur-[100px] animate-pulse will-change-transform" 
-        style={{ transform: `translateY(${scrollY * 0.3}px)` }}
+        className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-gradient-to-br from-cyan/20 to-transparent rounded-full blur-[100px] animate-pulse will-change-transform transition-transform duration-700 ease-out" 
+        style={{ transform: `translateY(${scrollY * 0.3}px) translate(${mousePos.x * -30}px, ${mousePos.y * -20}px)` }}
       />
       <div 
-        className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-emerald/15 to-transparent rounded-full blur-[120px] will-change-transform"
-        style={{ transform: `translateY(${scrollY * -0.2}px)` }}
+        className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-emerald/15 to-transparent rounded-full blur-[120px] will-change-transform transition-transform duration-700 ease-out"
+        style={{ transform: `translateY(${scrollY * -0.2}px) translate(${mousePos.x * 25}px, ${mousePos.y * 15}px)` }}
       />
       <div 
-        className="absolute top-1/2 left-1/3 w-[300px] h-[300px] bg-gradient-to-r from-gold/10 to-transparent rounded-full blur-[80px] will-change-transform"
-        style={{ transform: `translateY(${scrollY * 0.15}px) translateX(${scrollY * -0.1}px)` }}
+        className="absolute top-1/2 left-1/3 w-[300px] h-[300px] bg-gradient-to-r from-gold/10 to-transparent rounded-full blur-[80px] will-change-transform transition-transform duration-500 ease-out"
+        style={{ transform: `translateY(${scrollY * 0.15}px) translateX(${scrollY * -0.1}px) translate(${mousePos.x * -20}px, ${mousePos.y * 25}px)` }}
       />
       
-      {/* Parallax floating shapes */}
+      {/* Parallax + Mouse-follow floating shapes */}
       <div 
-        className="absolute top-20 left-20 w-4 h-4 bg-cyan/30 rounded-full will-change-transform"
-        style={{ transform: `translateY(${scrollY * 0.5}px)` }}
+        className="absolute top-20 left-20 w-4 h-4 bg-cyan/30 rounded-full will-change-transform transition-transform duration-300 ease-out"
+        style={{ transform: `translateY(${scrollY * 0.5}px) translate(${mousePos.x * 40}px, ${mousePos.y * 35}px)` }}
       />
       <div 
-        className="absolute top-40 right-32 w-3 h-3 bg-emerald/40 rounded-full will-change-transform"
-        style={{ transform: `translateY(${scrollY * 0.4}px)` }}
+        className="absolute top-40 right-32 w-3 h-3 bg-emerald/40 rounded-full will-change-transform transition-transform duration-400 ease-out"
+        style={{ transform: `translateY(${scrollY * 0.4}px) translate(${mousePos.x * -35}px, ${mousePos.y * 30}px)` }}
       />
       <div 
-        className="absolute bottom-40 left-1/4 w-2 h-2 bg-gold/50 rounded-full will-change-transform"
-        style={{ transform: `translateY(${scrollY * -0.3}px)` }}
+        className="absolute bottom-40 left-1/4 w-2 h-2 bg-gold/50 rounded-full will-change-transform transition-transform duration-500 ease-out"
+        style={{ transform: `translateY(${scrollY * -0.3}px) translate(${mousePos.x * 50}px, ${mousePos.y * -40}px)` }}
       />
       
       {/* Grid overlay with parallax */}
