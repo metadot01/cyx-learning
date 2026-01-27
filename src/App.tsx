@@ -7,7 +7,9 @@ import Index from "./pages/Index";
 import Solutions from "./pages/Solutions";
 import Resources from "./pages/Resources";
 import LearningThatWorks from "./pages/LearningThatWorks";
+import CookiePolicy from "./pages/CookiePolicy";
 import NotFound from "./pages/NotFound";
+import CookieBanner from "./components/CookieBanner";
 
 const queryClient = new QueryClient();
 
@@ -23,9 +25,11 @@ const App = () => (
           <Route path="/solutions" element={<Solutions />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/learning-that-works" element={<LearningThatWorks />} />
+          <Route path="/cookie-policy" element={<CookiePolicy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <CookieBanner />
       </HashRouter>
     </TooltipProvider>
   </QueryClientProvider>
