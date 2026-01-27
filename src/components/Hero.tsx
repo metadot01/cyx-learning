@@ -19,13 +19,13 @@ const Hero = () => {
 
       <div className="section-container relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Trust Badge - Overline */}
-          <div className="flex flex-wrap items-center justify-center gap-3 animate-fade-up" style={{ animationDelay: '0.05s' }}>
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm text-sm text-white/90 font-medium">
+          {/* Trust Badges */}
+          <div className="flex flex-wrap items-center justify-center gap-3 mb-8 animate-fade-up" style={{ animationDelay: '0.05s' }}>
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald/20 border border-emerald/30 backdrop-blur-sm text-sm text-white font-medium">
               <Shield className="w-4 h-4 text-emerald" />
               Blockchain-verified certificates
             </span>
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm text-sm text-white/90 font-medium">
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan/20 border border-cyan/30 backdrop-blur-sm text-sm text-white font-medium">
               <Sparkles className="w-4 h-4 text-cyan" />
               AI-Powered personalization
             </span>
@@ -42,8 +42,8 @@ const Hero = () => {
               </span>
               {" "}You Can Trust
             </h1>
-            <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto">
-              Upskill and reskill your workforce in AI, Digital, and Compliance skills, boosting engagement, improving course completion rates, and maximizing ROI.
+            <p className="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
+              Upskill and reskill your workforce in AI, Digital, and Compliance skills—boosting engagement, improving completion rates, and maximizing ROI.
             </p>
           </div>
 
