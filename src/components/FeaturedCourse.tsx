@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Sparkles, Image, FileText, Music, Video, Layers, Scale, ArrowRight, CheckCircle, Share2, Link, Check, Award, Clock, BookOpen } from "lucide-react";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
 import { Button } from "@/components/ui/button";
+import AICreativeDemo from "@/components/AICreativeDemo";
 
 const learningPoints = [
   { icon: Image, text: "AI-powered image generation and advanced prompting" },
@@ -170,7 +171,7 @@ const FeaturedCourse = () => {
           {/* Right Content - What You'll Learn */}
           <AnimatedSection animation="slide-right" delay={200} className="lg:col-span-7">
             <div className="h-full bg-white/80 backdrop-blur-xl rounded-3xl border border-border/50 p-8 lg:p-10 shadow-xl">
-              <div className="flex items-center gap-4 mb-8">
+              <div className="flex items-center gap-4 mb-6">
                 <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan/20 to-emerald/10 border border-cyan/20 flex items-center justify-center shadow-lg">
                   <BookOpen className="w-7 h-7 text-cyan" />
                 </div>
@@ -180,36 +181,43 @@ const FeaturedCourse = () => {
                 </div>
               </div>
               
-              <div className="grid sm:grid-cols-2 gap-4 mb-8">
+              <div className="grid sm:grid-cols-2 gap-3 mb-6">
                 {learningPoints.map((point, index) => (
                   <div 
                     key={index} 
-                    className="group flex items-start gap-4 p-4 rounded-2xl bg-gradient-to-br from-muted/50 to-transparent border border-border/50 hover:border-emerald/30 hover:shadow-md transition-all duration-300"
+                    className="group flex items-start gap-3 p-3 rounded-xl bg-gradient-to-br from-muted/50 to-transparent border border-border/50 hover:border-emerald/30 hover:shadow-md transition-all duration-300"
                   >
-                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald/10 to-cyan/10 border border-emerald/20 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                      <point.icon className="w-5 h-5 text-emerald" />
+                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald/10 to-cyan/10 border border-emerald/20 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                      <point.icon className="w-4 h-4 text-emerald" />
                     </div>
-                    <span className="text-sm text-foreground/80 leading-relaxed pt-2">{point.text}</span>
+                    <span className="text-xs text-foreground/80 leading-relaxed pt-1">{point.text}</span>
                   </div>
                 ))}
               </div>
 
               {/* Highlights */}
-              <div className="pt-6 border-t border-border/50">
-                <div className="flex flex-wrap gap-3">
-                  <span className="inline-flex items-center gap-2 px-4 py-2 bg-muted/80 rounded-xl text-sm text-muted-foreground font-medium border border-border/50">
-                    <CheckCircle className="w-4 h-4 text-emerald" />
-                    Hands-on projects
-                  </span>
-                  <span className="inline-flex items-center gap-2 px-4 py-2 bg-muted/80 rounded-xl text-sm text-muted-foreground font-medium border border-border/50">
-                    <CheckCircle className="w-4 h-4 text-emerald" />
-                    Lifetime access
-                  </span>
-                  <span className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan/10 to-emerald/10 rounded-xl text-sm text-cyan font-semibold border border-cyan/20">
-                    <Award className="w-4 h-4" />
-                    Blockchain verified certificate
-                  </span>
+              <div className="flex flex-wrap gap-2 mb-6">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-muted/80 rounded-lg text-xs text-muted-foreground font-medium border border-border/50">
+                  <CheckCircle className="w-3.5 h-3.5 text-emerald" />
+                  Hands-on projects
+                </span>
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-muted/80 rounded-lg text-xs text-muted-foreground font-medium border border-border/50">
+                  <CheckCircle className="w-3.5 h-3.5 text-emerald" />
+                  Lifetime access
+                </span>
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-cyan/10 to-emerald/10 rounded-lg text-xs text-cyan font-semibold border border-cyan/20">
+                  <Award className="w-3.5 h-3.5" />
+                  Blockchain certificate
+                </span>
+              </div>
+
+              {/* AI Demo Preview */}
+              <div className="pt-4 border-t border-border/50">
+                <div className="flex items-center gap-2 mb-3">
+                  <Sparkles className="w-4 h-4 text-cyan" />
+                  <span className="text-sm font-semibold text-foreground">Live AI Demo</span>
                 </div>
+                <AICreativeDemo />
               </div>
             </div>
           </AnimatedSection>
