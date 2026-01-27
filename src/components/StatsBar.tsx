@@ -21,7 +21,7 @@ const stats = [
     icon: Star,
   },
   { 
-    value: "10,000+", 
+    value: "1,300+", 
     label: "Professionals", 
     sublabel: "Trained & certified",
     color: "text-cyan",
