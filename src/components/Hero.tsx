@@ -40,7 +40,7 @@ const Hero = () => {
                   <path d="M0 8 Q25 2 50 8 T100 8" stroke="currentColor" strokeWidth="3" fill="none" strokeLinecap="round" />
                 </svg>
               </span>
-              {" "}You Can Trust for Your Future-Ready Workforce.
+              {" "}You Can Trust
             </h1>
             <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto">
               Upskill your employees in AI, Digital, and Compliance skills, with every credential securely verified via blockchain.
