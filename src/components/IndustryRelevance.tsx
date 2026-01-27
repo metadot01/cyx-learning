@@ -25,7 +25,7 @@ const solutions = [
   },
   {
     icon: Trophy,
-    title: "Gamified Platform",
+    title: "AI Powered Gamified Engine",
     stat: "40%",
     statLabel: "More Engagement",
     description: "Badges, leaderboards & challenges that drive completion",

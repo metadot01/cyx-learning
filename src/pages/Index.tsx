@@ -5,8 +5,8 @@ import IndustryRelevance from "@/components/IndustryRelevance";
 import WhyChooseCyxor from "@/components/WhyChooseCyxor";
 import FeaturedCourse from "@/components/FeaturedCourse";
 import Testimonials from "@/components/Testimonials";
-import TransformCTA from "@/components/TransformCTA";
 import FeaturedInstructor from "@/components/FeaturedInstructor";
+import TransformCTA from "@/components/TransformCTA";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -20,8 +20,8 @@ const Index = () => {
         <WhyChooseCyxor />
         <FeaturedCourse />
         <Testimonials />
-        <TransformCTA />
         <FeaturedInstructor />
+        <TransformCTA />
       </main>
       <Footer />
     </div>

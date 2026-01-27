@@ -1,4 +1,4 @@
-import { ArrowRight, Play, Shield, Sparkles, Users } from "lucide-react";
+import { Calendar, CheckCircle, Building2 } from "lucide-react";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
 import { Button } from "@/components/ui/button";
 
@@ -14,58 +14,54 @@ const TransformCTA = () => {
       <div className="absolute bottom-1/4 right-10 w-96 h-96 bg-emerald/15 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }} />
       
       <div className="section-container relative z-10">
-        <AnimatedSection className="text-center max-w-4xl mx-auto">
+        <AnimatedSection className="text-center max-w-3xl mx-auto">
+          <span className="inline-block text-white font-bold text-sm tracking-wider uppercase mb-4 px-4 py-2 bg-ocean rounded-full">
+            Get Started
+          </span>
+          
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground mb-6 leading-tight">
-            Ready to Transform Your{" "}
-            <span className="text-emerald">Workforce?</span>
+            Schedule a{" "}
+            <span className="text-emerald">Demo</span>
           </h2>
           
-          <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
-            Join thousands of organizations building verified skills with{" "}
+          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
+            See how{" "}
             <span className="text-ocean font-semibold">CYXOR</span>{" "}
-            <span className="text-emerald font-semibold">Learning</span>. Start with a free trial or schedule a personalized demo to see how blockchain-verified, AI-powered learning can deliver measurable ROI for your team.
+            <span className="text-emerald font-semibold">Learning</span>{" "}
+            can transform your workforce training with blockchain-verified certificates, AI-powered personalization, and gamified engagement.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            {/* Primary CTA - Free Trial */}
-            <div className="text-center">
-              <Button 
-                size="lg" 
-                className="bg-emerald hover:bg-emerald/90 text-white px-8 py-6 text-base font-semibold rounded-full shadow-lg hover:shadow-xl transition-all group mb-3"
-                asChild
-              >
-                <a href="https://cyxorlearning.com/complianceskills" target="_blank" rel="noopener noreferrer">
-                  Start Your Free 30-Day Trial
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </a>
-              </Button>
-              <p className="text-sm text-muted-foreground flex items-center justify-center gap-2">
-                <Shield className="w-4 h-4 text-ocean" />
-                No credit card required • Full access • Blockchain included
-              </p>
+          {/* Benefits */}
+          <div className="flex flex-wrap justify-center gap-4 mb-10">
+            <div className="flex items-center gap-2 text-muted-foreground">
+              <CheckCircle className="w-5 h-5 text-emerald" />
+              <span>Built for your needs</span>
             </div>
-
-            <span className="text-muted-foreground font-medium hidden sm:block">or</span>
-
-            {/* Secondary CTA - Demo */}
-            <div className="text-center">
-              <Button 
-                size="lg" 
-                variant="outline"
-                className="border-2 border-ocean text-ocean hover:bg-ocean hover:text-white px-8 py-6 text-base font-semibold rounded-full transition-all group mb-3"
-                asChild
-              >
-                <a href="https://cyxorlearning.com/complianceskills" target="_blank" rel="noopener noreferrer">
-                  <Play className="mr-2 w-5 h-5" />
-                  Schedule a Demo
-                </a>
-              </Button>
-              <p className="text-sm text-muted-foreground flex items-center justify-center gap-2">
-                <Users className="w-4 h-4 text-gold" />
-                Speak with a consultant • Custom pricing
-              </p>
+            <div className="flex items-center gap-2 text-muted-foreground">
+              <CheckCircle className="w-5 h-5 text-emerald" />
+              <span>Guided by an expert</span>
+            </div>
+            <div className="flex items-center gap-2 text-muted-foreground">
+              <Building2 className="w-5 h-5 text-ocean" />
+              <span>Enterprise-ready</span>
             </div>
           </div>
+
+          {/* CTA Button */}
+          <Button 
+            size="lg" 
+            className="bg-emerald hover:bg-emerald/90 text-white px-10 py-7 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all group glow-emerald"
+            asChild
+          >
+            <a href="https://cyxorlearning.com/complianceskills" target="_blank" rel="noopener noreferrer">
+              <Calendar className="mr-2 w-5 h-5" />
+              Schedule a Demo
+            </a>
+          </Button>
+          
+          <p className="mt-4 text-sm text-muted-foreground">
+            Speak with a learning consultant • Custom pricing available
+          </p>
         </AnimatedSection>
       </div>
     </section>
