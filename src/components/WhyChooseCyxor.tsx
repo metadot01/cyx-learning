@@ -1,47 +1,55 @@
-import { Shield, Trophy, FlaskConical, Clock, GraduationCap, CheckCircle } from "lucide-react";
+import { Sparkles, Shield, Trophy, Smartphone, BarChart3, Plug, CheckCircle } from "lucide-react";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
 
 const features = [
   {
+    icon: Sparkles,
+    title: "AI-Powered Personalization",
+    description: "Our AI engine adapts content difficulty, pacing, and format to each learner's style for optimal engagement and retention.",
+    items: ["Adaptive learning paths", "95% accuracy in style identification", "75% training time savings", "Personalized recommendations"],
+    color: "text-cyan",
+    bgColor: "bg-cyan/10",
+  },
+  {
     icon: Shield,
-    title: "Audit-Ready Documentation",
-    description: "Pre-built evidence and reporting aligned to ISO 27001 Annex A, SOC 2, and UK GDPR. Blockchain-verified certificates auditors can verify instantly.",
-    items: ["Blockchain-verified certificates", "Automated audit reports", "Regulator-accepted evidence", "Instant verification for auditors"],
+    title: "Blockchain Certificates",
+    description: "Every achievement recorded on an immutable blockchain ledger, providing tamper-proof credentials that build trust.",
+    items: ["Tamper-proof verification", "One-click QR validation", "Lifetime credential access", "Eliminates credential fraud"],
     color: "text-ocean",
     bgColor: "bg-ocean/10",
   },
   {
     icon: Trophy,
-    title: "Gamified Engagement",
-    highlight: "95% Completion vs 15% Industry Average",
-    description: "Turn GDPR and ISO training into team competitions. Leaderboards, challenges, and achievements that drive 300% higher engagement than traditional eLearning.",
-    items: ["Team leaderboards", "Individual achievements", "Timed challenges", "Weekly competitions"],
+    title: "Gamification Engine",
+    highlight: "40% Higher Engagement",
+    description: "Transform training with badges, leaderboards, challenges, and rewards that motivate learners to complete courses.",
+    items: ["Progressive achievements", "Team leaderboards", "Daily challenges", "Streak rewards"],
     color: "text-gold",
     bgColor: "bg-gold/10",
   },
   {
-    icon: FlaskConical,
-    title: "Real-World Simulations",
-    description: "Not just videos—actual practice. Build RAG systems, deploy Kubernetes clusters, conduct GDPR audits in safe, hands-on environments.",
-    items: ["Interactive labs", "Real-world scenarios", "Immediate feedback", "Production-ready skills"],
+    icon: Smartphone,
+    title: "Mobile-First Design",
+    description: "Learn anywhere, anytime. Our responsive platform delivers seamless experiences on phones, tablets, and desktops.",
+    items: ["5-15 minute microlearning", "Offline access available", "Cross-device sync", "Learn during downtime"],
     color: "text-emerald",
     bgColor: "bg-emerald/10",
   },
   {
-    icon: Clock,
-    title: "Fits Into Working Schedules",
-    description: "15-20 minute modules you can complete between meetings. Complete full certifications in weeks, not months. Better retention through spaced repetition.",
-    items: ["Average module: 15-20 minutes", "Mobile-optimized learning", "Learn at your own pace", "Complete certifications in 6-8 weeks"],
-    color: "text-cyan",
-    bgColor: "bg-cyan/10",
-  },
-  {
-    icon: GraduationCap,
-    title: "Taught by Industry Practitioners",
-    description: "Instructors with 15+ years at Dell, EMC, and enterprise fintech. Real-world experience, not just theory. Current practitioners who understand what actually works.",
-    items: ["15+ years average experience", "Active in regulated industries", "Certified professionals", "Practical, not theoretical"],
+    icon: BarChart3,
+    title: "Advanced Analytics",
+    description: "Track progress, identify skill gaps, measure ROI, and generate compliance reports with comprehensive analytics.",
+    items: ["Real-time dashboards", "ROI calculators", "Skill gap analysis", "Compliance reporting"],
     color: "text-lavender",
     bgColor: "bg-lavender/10",
+  },
+  {
+    icon: Plug,
+    title: "LMS Integration",
+    description: "Seamlessly integrate with your existing LMS via SCORM 2004, xAPI, or direct API connections.",
+    items: ["SCORM 2004 compatible", "xAPI support", "Direct API access", "White-label options"],
+    color: "text-slate",
+    bgColor: "bg-slate/10",
   },
 ];
 
@@ -53,14 +61,14 @@ const WhyChooseCyxor = () => {
       <div className="section-container relative z-10">
         <AnimatedSection className="text-center mb-12 lg:mb-16">
           <span className="inline-block text-white font-bold text-sm tracking-wider uppercase mb-4 px-4 py-2 bg-ocean rounded-full">
-            Why CYXOR LEARNING
+            Platform Capabilities
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground mt-4 mb-4 leading-tight">
-            Maximize Compliance and{" "}
-            <span className="text-emerald">ROI</span>
+            Why Leading Organizations Choose{" "}
+            <span className="text-emerald">CYXOR Learning</span>
           </h2>
           <p className="text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Expert-led, hands-on courses that your team completes - and your auditors trust.
+            Six powerful capabilities that transform how your team learns, verifies, and grows.
           </p>
         </AnimatedSection>
 
