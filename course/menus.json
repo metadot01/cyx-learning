@@ -1,0 +1,16 @@
+[
+  {
+    "_id": "menu-co-main-menu",
+    "_parentId": "co-main-menu",
+    "_type": "menu",
+    "_classes": "",
+    "_isAvailable": true,
+    "_isOptional": false,
+    "_isComplete": false,
+    "_isInteractionComplete": false,
+    "title": "AI for Creatives",
+    "displayTitle": "AI for Creatives",
+    "body": "Select a module to begin your learning journey.",
+    "instruction": ""
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "_id": "a-lesson-1-1-intro",
+    "_parentId": "co-lesson-1-1",
+    "_type": "article",
+    "_classes": "",
+    "_isAvailable": true,
+    "_isOptional": false,
+    "_isComplete": false,
+    "_isInteractionComplete": false,
+    "title": "Understanding Creative AI",
+    "displayTitle": "Understanding Creative AI",
+    "body": "",
+    "instruction": ""
+  },
+  {
+    "_id": "a-lesson-1-1-spectrum",
+    "_parentId": "co-lesson-1-1",
+    "_type": "article",
+    "_classes": "",
+    "_isAvailable": true,
+    "_isOptional": false,
+    "_isComplete": false,
+    "_isInteractionComplete": false,
+    "title": "The Creative Spectrum",
+    "displayTitle": "The Creative Spectrum",
+    "body": "",
+    "instruction": ""
+  },
+  {
+    "_id": "a-lesson-1-1-check",
+    "_parentId": "co-lesson-1-1",
+    "_type": "article",
+    "_classes": "",
+    "_isAvailable": true,
+    "_isOptional": false,
+    "_isComplete": false,
+    "_isInteractionComplete": false,
+    "title": "Knowledge Check",
+    "displayTitle": "Knowledge Check",
+    "body": "",
+    "instruction": ""
+  }
+]

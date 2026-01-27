@@ -1,0 +1,103 @@
+{
+  "_id": "course",
+  "_type": "course",
+  "_globals": {
+    "_accessibility": {
+      "accessibilityToggleTextOn": "Turn accessibility on?",
+      "accessibilityToggleTextOff": "Turn accessibility off?",
+      "_accessibilityInstructions": {
+        "touch": "Usage instructions. Use swipe left for next. Use swipe right for previous. Use a double tap to select. Use a two finger drag to scroll the page.",
+        "notouch": "Usage instructions. Use tab for next. Use shift tab for previous. Use enter to select. Use escape to go back.",
+        "ipad": "Usage instructions for touchscreens. Use swipe left for next. Use swipe right for previous. Use a double tap to select. Use a two finger drag to scroll the page. Usage instructions for keyboard access. Use left for next. Use right for previous. Use up and down together to select."
+      },
+      "_ariaLabels": {
+        "skipNavigation": "Skip navigation",
+        "previous": "Back",
+        "navigationDrawer": "Open course resources",
+        "close": "Close",
+        "closeDrawer": "Close Drawer",
+        "closeResources": "Close resources",
+        "drawerBack": "Back to drawer",
+        "drawer": "Top of side drawer",
+        "closePopup": "Close popup",
+        "next": "Next",
+        "done": "Done",
+        "complete": "Completed",
+        "incomplete": "Incomplete",
+        "incorrect": "Incorrect",
+        "correct": "Correct",
+        "locked": "Locked",
+        "visited": "Visited"
+      }
+    }
+  },
+  "_start": {
+    "_isEnabled": true,
+    "_startIds": [],
+    "_force": false,
+    "_isMenuDisabled": false
+  },
+  "_latestTrackingId": 6,
+  "_buttons": {
+    "_submit": {
+      "buttonText": "Submit",
+      "ariaLabel": "Submit"
+    },
+    "_reset": {
+      "buttonText": "Reset",
+      "ariaLabel": "Reset"
+    },
+    "_showCorrectAnswer": {
+      "buttonText": "Show correct answer",
+      "ariaLabel": "Show correct answer"
+    },
+    "_hideCorrectAnswer": {
+      "buttonText": "Hide correct answer",
+      "ariaLabel": "Hide correct answer"
+    },
+    "_showFeedback": {
+      "buttonText": "Show feedback",
+      "ariaLabel": "Show feedback"
+    },
+    "_remainingAttemptsText": "attempts remaining",
+    "_remainingAttemptText": "final attempt",
+    "disabledAriaLabel": "This button is disabled at the moment"
+  },
+  "_classes": "",
+  "_requireCompletionOf": -1,
+  "_isAvailable": true,
+  "_isOptional": false,
+  "_lockType": "",
+  "_isComplete": false,
+  "_isInteractionComplete": false,
+  "_isAssessmentPassed": false,
+  "_assessmentState": {},
+  "title": "AI for Creatives",
+  "displayTitle": "AI for Creatives",
+  "subtitle": "",
+  "description": "Master the art of creative AI: from understanding augmentation mindsets to hands-on practice with image, text, audio, and video generation tools.",
+  "body": "Welcome to AI for Creatives. This course will transform how you approach creative work by integrating AI tools into your workflow.",
+  "instruction": "",
+  "_htmlClasses": "",
+  "_extensions": {
+    "_resources": {
+      "_isEnabled": false,
+      "_drawerOrder": 0,
+      "title": "Resources",
+      "description": "Select here to view resources for this course",
+      "_filterButtons": {
+        "all": "All",
+        "document": "Documents",
+        "media": "Media",
+        "link": "Links"
+      },
+      "_filterAria": {
+        "allAria": "View all resources",
+        "documentAria": "View document resources",
+        "mediaAria": "View media resources",
+        "linkAria": "View resource links"
+      },
+      "_resourcesItems": []
+    }
+  }
+}
