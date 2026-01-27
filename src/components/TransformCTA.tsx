@@ -20,8 +20,8 @@ const TransformCTA = () => {
           </span>
           
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground mb-6 leading-tight">
-            Schedule a{" "}
-            <span className="text-emerald">Demo</span>
+            Ready to Upskill or Reskill{" "}
+            <span className="text-emerald">Your Team?</span>
           </h2>
           
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
