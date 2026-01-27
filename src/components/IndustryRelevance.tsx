@@ -56,8 +56,8 @@ const IndustryRelevance = () => {
             Solutions
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground mt-4 mb-4 leading-tight">
-            Training That Delivers{" "}
-            <span className="text-emerald">Results</span>
+            Workplace Learning That Delivers{" "}
+            <span className="text-emerald">Measurable Results</span>
           </h2>
           <p className="text-base lg:text-lg text-muted-foreground max-w-xl mx-auto">
             95% completion rate vs 15% industry average
