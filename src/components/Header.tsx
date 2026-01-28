@@ -40,7 +40,7 @@ const navItems = [
   {
     label: "Upskill/Reskill",
     href: "/solutions#upskill",
-    description: "Employee Development & Growth",
+    description: "Workforce Development & Growth",
     icon: TrendingUp,
     color: "text-emerald",
     bgColor: "bg-emerald/10",
