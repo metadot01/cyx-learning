@@ -74,27 +74,9 @@ const Footer = () => {
 
   return (
     <>
-      <footer className="bg-gradient-to-b from-navy via-navy to-slate-950 text-white pb-safe relative overflow-hidden">
-        {/* Decorative Elements */}
-        <div className="absolute inset-0 pointer-events-none">
-          {/* Gradient orbs */}
-          <div className="absolute top-20 left-[10%] w-[500px] h-[500px] bg-cyan/8 rounded-full blur-[120px]" />
-          <div className="absolute bottom-20 right-[10%] w-[400px] h-[400px] bg-emerald/8 rounded-full blur-[100px]" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-violet-500/5 rounded-full blur-[150px]" />
-          
-          {/* Grid pattern overlay */}
-          <div 
-            className="absolute inset-0 opacity-[0.03]"
-            style={{
-              backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), 
-                               linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
-              backgroundSize: '60px 60px'
-            }}
-          />
-        </div>
-        
+      <footer className="bg-navy text-white pb-safe relative overflow-hidden">
         {/* Top Accent Line */}
-        <div className="h-px bg-gradient-to-r from-transparent via-cyan/50 to-transparent" />
+        <div className="h-px bg-white/10" />
 
 
         {/* Main Footer Content */}
