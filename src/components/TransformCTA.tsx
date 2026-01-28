@@ -15,37 +15,15 @@ const TransformCTA = () => {
       
       <div className="section-container relative z-10 px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center max-w-3xl mx-auto">
-          <span className="inline-block text-white font-bold text-xs sm:text-sm tracking-wider uppercase mb-3 sm:mb-4 px-3 sm:px-4 py-1.5 sm:py-2 bg-ocean rounded-full">
-            Get Started
-          </span>
-          
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground mb-4 sm:mb-6 leading-tight px-2">
-            Ready to Upskill or Reskill{" "}
-            <span className="text-emerald">Your Team?</span>
+            Transform workforce training with{" "}
+            <span className="text-ocean">CYXOR</span>{" "}
+            <span className="text-emerald">Learning</span>
           </h2>
           
-          <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed px-4">
-            See how{" "}
-            <span className="text-ocean font-semibold">CYXOR</span>{" "}
-            <span className="text-emerald font-semibold">Learning</span>{" "}
-            can transform your workforce training with blockchain-verified certificates, AI-powered personalization, and gamified engagement.
+          <p className="text-base sm:text-lg text-muted-foreground mb-8 sm:mb-10 max-w-2xl mx-auto leading-relaxed px-4">
+            AI-powered personalization, blockchain-verified credentials, and gamified engagement—built for enterprise scale.
           </p>
-
-          {/* Benefits */}
-          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 mb-8 sm:mb-10 px-4">
-            <div className="flex items-center justify-center gap-2 text-muted-foreground">
-              <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-emerald" />
-              <span className="text-sm sm:text-base">Built for your needs</span>
-            </div>
-            <div className="flex items-center justify-center gap-2 text-muted-foreground">
-              <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-emerald" />
-              <span className="text-sm sm:text-base">Guided by an expert</span>
-            </div>
-            <div className="flex items-center justify-center gap-2 text-muted-foreground">
-              <Building2 className="w-4 h-4 sm:w-5 sm:h-5 text-ocean" />
-              <span className="text-sm sm:text-base">Enterprise-ready</span>
-            </div>
-          </div>
 
           {/* CTA Button */}
           <Button 
@@ -55,13 +33,9 @@ const TransformCTA = () => {
           >
             <a href="https://cyxorlearning.com/complianceskills" target="_blank" rel="noopener noreferrer">
               <Calendar className="mr-2 w-4 h-4 sm:w-5 sm:h-5" />
-              Schedule a Demo
+              Schedule a demo
             </a>
           </Button>
-          
-          <p className="mt-3 sm:mt-4 text-xs sm:text-sm text-muted-foreground">
-            Speak with a learning consultant • Custom pricing available
-          </p>
         </AnimatedSection>
       </div>
     </section>
