@@ -47,49 +47,49 @@ const solutions = [
 
 const IndustryRelevance = () => {
   return (
-    <section id="industries" className="py-20 lg:py-28 relative scroll-mt-24">
+    <section id="industries" className="py-16 sm:py-20 lg:py-28 relative scroll-mt-24">
       {/* Background with gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-ocean/5 to-background" />
       <div className="absolute inset-0 blockchain-grid" />
       
-      <div className="section-container relative z-10">
-        <AnimatedSection className="text-center mb-12 lg:mb-16">
-          <span className="inline-block text-white font-bold text-sm tracking-wider uppercase mb-4 px-4 py-2 bg-ocean rounded-full">
+      <div className="section-container relative z-10 px-4 sm:px-6 lg:px-8">
+        <AnimatedSection className="text-center mb-10 sm:mb-12 lg:mb-16">
+          <span className="inline-block text-white font-bold text-xs sm:text-sm tracking-wider uppercase mb-3 sm:mb-4 px-3 sm:px-4 py-1.5 sm:py-2 bg-ocean rounded-full">
             Solutions
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground mt-4 mb-4 leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground mt-3 sm:mt-4 mb-3 sm:mb-4 leading-tight px-2">
             Workplace Learning That Delivers{" "}
             <span className="text-emerald">Measurable Results</span>
           </h2>
-          <p className="text-base lg:text-lg text-muted-foreground max-w-xl mx-auto">
+          <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-xl mx-auto px-4">
             95% completion rate vs 15% industry average
           </p>
         </AnimatedSection>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-10 sm:mb-12">
           {solutions.map((solution, index) => (
             <AnimatedSection
               key={solution.title}
               delay={index * 100}
               animation="fade-up"
             >
-              <div className={`group relative p-6 rounded-2xl bg-card border ${solution.borderColor} hover:border-cyan/40 transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1 h-full text-center`}>
-                <div className={`w-14 h-14 rounded-xl ${solution.bgColor} flex items-center justify-center mx-auto mb-4 border ${solution.borderColor} group-hover:scale-110 transition-transform`}>
-                  <solution.icon className={`w-7 h-7 ${solution.color}`} />
+              <div className={`group relative p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-card border ${solution.borderColor} hover:border-cyan/40 transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1 h-full text-center`}>
+                <div className={`w-10 h-10 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl ${solution.bgColor} flex items-center justify-center mx-auto mb-3 sm:mb-4 border ${solution.borderColor} group-hover:scale-110 transition-transform`}>
+                  <solution.icon className={`w-5 h-5 sm:w-7 sm:h-7 ${solution.color}`} />
                 </div>
                 
-                <div className={`text-3xl font-extrabold ${solution.color} mb-1`}>
+                <div className={`text-2xl sm:text-3xl font-extrabold ${solution.color} mb-1`}>
                   {solution.stat}
                 </div>
-                <div className="text-xs text-muted-foreground uppercase tracking-wide mb-3">
+                <div className="text-[10px] sm:text-xs text-muted-foreground uppercase tracking-wide mb-2 sm:mb-3">
                   {solution.statLabel}
                 </div>
                 
-                <h3 className="text-lg font-bold text-foreground mb-2">
+                <h3 className="text-base sm:text-lg font-bold text-foreground mb-2">
                   {solution.title}
                 </h3>
                 
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                   {solution.description}
                 </p>
               </div>
@@ -100,12 +100,12 @@ const IndustryRelevance = () => {
         <AnimatedSection className="text-center" delay={400}>
           <Button 
             size="lg" 
-            className="bg-emerald hover:bg-emerald/90 text-white px-8 py-6 text-base font-semibold rounded-full shadow-lg hover:shadow-xl transition-all group"
+            className="bg-emerald hover:bg-emerald/90 text-white px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-base font-semibold rounded-full shadow-lg hover:shadow-xl transition-all group"
             asChild
           >
             <a href="https://cyxorlearning.com/complianceskills" target="_blank" rel="noopener noreferrer">
               Explore All Solutions
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
             </a>
           </Button>
         </AnimatedSection>

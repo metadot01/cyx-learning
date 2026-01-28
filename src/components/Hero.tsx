@@ -66,41 +66,41 @@ const Hero = () => {
         style={{ transform: `translateY(${scrollY * 0.1}px)` }}
       />
 
-      <div className="section-container relative z-10">
+      <div className="section-container relative z-10 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           {/* Trust Badges */}
-          <div className="flex flex-wrap items-center justify-center gap-3 mb-8 animate-fade-up" style={{ animationDelay: '0.05s' }}>
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald/20 border border-emerald/30 backdrop-blur-sm text-sm text-white font-medium">
-              <Shield className="w-4 h-4 text-emerald" />
+          <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-2 sm:gap-3 mb-6 sm:mb-8 animate-fade-up" style={{ animationDelay: '0.05s' }}>
+            <span className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-emerald/20 border border-emerald/30 backdrop-blur-sm text-xs sm:text-sm text-white font-medium">
+              <Shield className="w-3 h-3 sm:w-4 sm:h-4 text-emerald" />
               Blockchain-verified certificates
             </span>
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan/20 border border-cyan/30 backdrop-blur-sm text-sm text-white font-medium">
-              <Sparkles className="w-4 h-4 text-cyan" />
+            <span className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-cyan/20 border border-cyan/30 backdrop-blur-sm text-xs sm:text-sm text-white font-medium">
+              <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-cyan" />
               AI-Powered personalization
             </span>
           </div>
 
           {/* Main Heading */}
-          <div className="space-y-6 animate-fade-up" style={{ animationDelay: '0.1s' }}>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-[1.1] tracking-tight text-center">
+          <div className="space-y-4 sm:space-y-6 animate-fade-up" style={{ animationDelay: '0.1s' }}>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-[1.1] tracking-tight text-center px-2">
               <span className="relative inline-block text-emerald drop-shadow-[0_0_30px_rgba(0,200,150,0.5)]">
                 Interactive AI Learning
-                <svg className="absolute -bottom-2 left-0 w-full h-3 text-emerald/60" viewBox="0 0 100 12" preserveAspectRatio="none">
+                <svg className="absolute -bottom-1 sm:-bottom-2 left-0 w-full h-2 sm:h-3 text-emerald/60" viewBox="0 0 100 12" preserveAspectRatio="none">
                   <path d="M0 8 Q25 2 50 8 T100 8" stroke="currentColor" strokeWidth="3" fill="none" strokeLinecap="round" />
                 </svg>
               </span>
               {" "}You Can Trust
             </h1>
-            <p className="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed px-4">
               Transform your workforce with future-ready AI, digital, and compliance skills - unlock higher engagement, better completion rates, and measurable ROI.
             </p>
           </div>
 
 
           {/* CTAs */}
-          <div className="flex items-center justify-center mt-10 animate-fade-up" style={{ animationDelay: '0.2s' }}>
+          <div className="flex items-center justify-center mt-8 sm:mt-10 animate-fade-up" style={{ animationDelay: '0.2s' }}>
             <a href="https://cyxorlearning.com/technologyskills" target="_blank" rel="noopener noreferrer">
-              <Button variant="hero" size="lg" className="text-base px-8 h-12 shadow-[0_0_40px_rgba(0,200,150,0.3)] hover:shadow-[0_0_60px_rgba(0,200,150,0.5)] transition-all duration-300 group">
+              <Button variant="hero" size="lg" className="text-sm sm:text-base px-6 sm:px-8 h-11 sm:h-12 shadow-[0_0_40px_rgba(0,200,150,0.3)] hover:shadow-[0_0_60px_rgba(0,200,150,0.5)] transition-all duration-300 group">
                 Upskill/Reskill Your Team
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
