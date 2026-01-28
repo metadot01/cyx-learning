@@ -182,14 +182,14 @@ const Header = () => {
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-50 bg-background backdrop-blur-md border-b border-border/50 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 lg:h-20">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-14 sm:h-16 lg:h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center flex-shrink-0">
               <img 
                 src={cyxorLogo} 
                 alt="CYXOR Learning" 
-                className="h-10 sm:h-11 lg:h-12 w-auto mix-blend-multiply dark:mix-blend-screen dark:brightness-0 dark:invert"
+                className="h-8 sm:h-11 lg:h-12 w-auto mix-blend-multiply dark:mix-blend-screen dark:brightness-0 dark:invert"
                 style={{ backgroundColor: 'transparent' }}
               />
             </Link>
@@ -336,50 +336,50 @@ const Header = () => {
             <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
               <SheetTrigger asChild>
                 <button 
-                  className="xl:hidden p-2 rounded-lg hover:bg-muted transition-colors"
+                  className="xl:hidden p-2 -mr-1 rounded-lg hover:bg-muted transition-colors"
                   aria-label="Open menu"
                 >
-                  <Menu className="w-6 h-6 text-foreground" />
+                  <Menu className="w-5 h-5 sm:w-6 sm:h-6 text-foreground" />
                 </button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-full sm:w-[400px] bg-background p-0 overflow-hidden">
+              <SheetContent side="right" className="w-[85vw] sm:w-[400px] bg-background p-0 overflow-hidden">
                 <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
                 <div className="flex flex-col h-full">
                   {/* Mobile Header */}
-                  <div className="flex items-center justify-between p-4 border-b border-border">
+                  <div className="flex items-center justify-between p-3 sm:p-4 border-b border-border">
                     <img 
                       src={cyxorLogo} 
                       alt="CYXOR Learning" 
-                      className="h-9 w-auto mix-blend-multiply dark:mix-blend-screen dark:brightness-0 dark:invert"
+                      className="h-8 sm:h-9 w-auto mix-blend-multiply dark:mix-blend-screen dark:brightness-0 dark:invert"
                       style={{ backgroundColor: 'transparent' }}
                     />
                   </div>
 
                   {/* Mobile Navigation */}
-                  <nav className="flex-1 overflow-y-auto">
+                  <nav className="flex-1 overflow-y-auto pb-safe">
                     {navItems.map((item) => {
                       const ItemIcon = item.icon;
                       return (
                         <div key={item.label} className="border-b border-border/30">
                           <button
                             onClick={() => toggleMobileSection(item.label)}
-                            className="w-full flex items-center justify-between px-4 py-4 text-left hover:bg-muted/30 transition-colors"
+                            className="w-full flex items-center justify-between px-3 sm:px-4 py-3 sm:py-4 text-left hover:bg-muted/30 transition-colors active:bg-muted/50"
                           >
-                            <div className="flex items-center gap-3">
-                              <div className={`w-9 h-9 rounded-lg ${item.bgColor} flex items-center justify-center`}>
-                                <ItemIcon className={`w-4 h-4 ${item.color}`} />
+                            <div className="flex items-center gap-2.5 sm:gap-3">
+                              <div className={`w-8 h-8 sm:w-9 sm:h-9 rounded-lg ${item.bgColor} flex items-center justify-center`}>
+                                <ItemIcon className={`w-3.5 h-3.5 sm:w-4 sm:h-4 ${item.color}`} />
                               </div>
                               <div>
-                                <span className="block font-semibold text-foreground">
+                                <span className="block font-semibold text-foreground text-sm sm:text-base">
                                   {item.label}
                                 </span>
-                                <span className="block text-xs text-muted-foreground mt-0.5">
+                                <span className="block text-[10px] sm:text-xs text-muted-foreground mt-0.5">
                                   {item.description}
                                 </span>
                               </div>
                             </div>
                             <ChevronDown 
-                              className={`w-5 h-5 text-emerald transition-transform duration-200 flex-shrink-0 ${
+                              className={`w-4 h-4 sm:w-5 sm:h-5 text-emerald transition-transform duration-200 flex-shrink-0 ${
                                 expandedMobileSection === item.label ? 'rotate-180' : ''
                               }`} 
                             />
@@ -387,7 +387,7 @@ const Header = () => {
                           
                           {/* Expandable Sub-items */}
                           {expandedMobileSection === item.label && (
-                            <div className="bg-muted/30 py-2 px-4">
+                            <div className="bg-muted/30 py-1.5 sm:py-2 px-3 sm:px-4">
                               {item.items.map((subItem) => {
                                 const SubIcon = subItem.icon;
                                 return 'isDialog' in subItem && subItem.isDialog ? (
@@ -397,14 +397,14 @@ const Header = () => {
                                       setMobileOpen(false);
                                       setContactOpen(true);
                                     }}
-                                    className="flex items-center gap-3 w-full text-left py-3 px-3 rounded-lg hover:bg-background transition-colors"
+                                    className="flex items-center gap-2.5 sm:gap-3 w-full text-left py-2.5 sm:py-3 px-2.5 sm:px-3 rounded-lg hover:bg-background transition-colors active:bg-background/80"
                                   >
-                                    <SubIcon className={`w-4 h-4 ${item.color}`} />
+                                    <SubIcon className={`w-3.5 h-3.5 sm:w-4 sm:h-4 ${item.color}`} />
                                     <div>
-                                      <span className="block text-sm font-medium text-foreground">
+                                      <span className="block text-xs sm:text-sm font-medium text-foreground">
                                         {subItem.label}
                                       </span>
-                                      <span className="block text-xs text-muted-foreground mt-0.5">
+                                      <span className="block text-[10px] sm:text-xs text-muted-foreground mt-0.5">
                                         {subItem.description}
                                       </span>
                                     </div>
@@ -414,14 +414,14 @@ const Header = () => {
                                     key={subItem.label}
                                     to={subItem.href}
                                     onClick={() => setMobileOpen(false)}
-                                    className="flex items-center gap-3 py-3 px-3 rounded-lg hover:bg-background transition-colors"
+                                    className="flex items-center gap-2.5 sm:gap-3 py-2.5 sm:py-3 px-2.5 sm:px-3 rounded-lg hover:bg-background transition-colors active:bg-background/80"
                                   >
-                                    <SubIcon className={`w-4 h-4 ${item.color}`} />
+                                    <SubIcon className={`w-3.5 h-3.5 sm:w-4 sm:h-4 ${item.color}`} />
                                     <div>
-                                      <span className="block text-sm font-medium text-foreground">
+                                      <span className="block text-xs sm:text-sm font-medium text-foreground">
                                         {subItem.label}
                                       </span>
-                                      <span className="block text-xs text-muted-foreground mt-0.5">
+                                      <span className="block text-[10px] sm:text-xs text-muted-foreground mt-0.5">
                                         {subItem.description}
                                       </span>
                                     </div>
@@ -436,10 +436,10 @@ const Header = () => {
                   </nav>
 
                   {/* Mobile CTAs */}
-                  <div className="p-4 border-t border-border space-y-3">
+                  <div className="p-3 sm:p-4 border-t border-border space-y-2 sm:space-y-3 pb-safe">
                     <Button 
                       variant="outline" 
-                      className="w-full border-emerald/30 text-emerald hover:bg-emerald/10"
+                      className="w-full h-10 sm:h-11 text-sm border-emerald/30 text-emerald hover:bg-emerald/10"
                       onClick={() => {
                         setMobileOpen(false);
                         setContactOpen(true);
@@ -448,7 +448,7 @@ const Header = () => {
                       Request Demo
                     </Button>
                     <Button 
-                      className="w-full bg-emerald hover:bg-emerald/90 text-white"
+                      className="w-full h-10 sm:h-11 text-sm bg-emerald hover:bg-emerald/90 text-white"
                       onClick={() => {
                         setMobileOpen(false);
                         setContactOpen(true);
