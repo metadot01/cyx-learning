@@ -137,26 +137,6 @@ const navItems = [
       { label: "Verification Portal", href: "/resources#verification", description: "Validate credentials", icon: Fingerprint },
     ],
   },
-  {
-    label: "Resources",
-    href: "/resources",
-    description: "Support & Knowledge",
-    icon: BookOpen,
-    color: "text-cyan",
-    bgColor: "bg-cyan/10",
-    featured: {
-      title: "Learning Resources",
-      description: "Access case studies, insights, and connect with our expert instructors.",
-      cta: "Explore Resources",
-      href: "/resources"
-    },
-    items: [
-      { label: "Case Studies", href: "/resources#case-studies", description: "Success stories", icon: FileText },
-      { label: "Blog & Insights", href: "/resources#blog", description: "Industry knowledge", icon: BookOpen },
-      { label: "Our Instructors", href: "/resources#instructors", description: "Expert educators", icon: GraduationCap },
-      { label: "Contact Us", href: "contact-dialog", isDialog: true, description: "Get in touch", icon: Phone },
-    ],
-  },
 ];
 
 const Header = () => {
