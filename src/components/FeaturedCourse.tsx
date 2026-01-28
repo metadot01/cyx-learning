@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Sparkles, Image, FileText, Music, Video, Layers, Scale, ArrowRight, CheckCircle, Share2, Link, Check, Award, Clock, BookOpen, Star, Users, TrendingUp, Zap } from "lucide-react";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
 import { Button } from "@/components/ui/button";
-import AICreativeDemo from "@/components/AICreativeDemo";
 
 const learningPoints = [
   { icon: Image, text: "AI-powered image generation and advanced prompting" },
@@ -247,13 +246,11 @@ const FeaturedCourse = () => {
                 </span>
               </div>
 
-              {/* AI Demo Preview */}
-              <div className="pt-2 sm:pt-4 border-t border-border/50">
-                <div className="flex items-center gap-1.5 sm:gap-2 mb-2 sm:mb-3">
-                  <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-cyan" />
-                  <span className="text-[10px] sm:text-sm font-semibold text-foreground">Live AI Demo</span>
-                </div>
-                <AICreativeDemo />
+              {/* Course Benefits Summary */}
+              <div className="pt-3 sm:pt-4 border-t border-border/50">
+                <p className="text-[11px] sm:text-sm text-muted-foreground leading-relaxed">
+                  <span className="font-semibold text-foreground">Start creating today</span> — gain practical AI skills you can apply immediately to your creative work.
+                </p>
               </div>
             </div>
           </AnimatedSection>
