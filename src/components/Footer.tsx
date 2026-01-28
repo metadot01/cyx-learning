@@ -63,7 +63,7 @@ const Footer = () => {
             </h4>
             <ul className="space-y-1.5 sm:space-y-3 text-[10px] sm:text-sm text-white/70">
               <li><a href="https://cyxorlearning.com/courses/" target="_blank" rel="noopener noreferrer" className="hover:text-cyan transition-colors">Browse Courses</a></li>
-              <li><Link to="/solutions" className="hover:text-cyan transition-colors">Corporate Upskilling</Link></li>
+              <li><Link to="/solutions" className="hover:text-cyan transition-colors">Corporate Upskilling/Reskilling</Link></li>
               <li><Link to="/solutions" className="hover:text-cyan transition-colors">Custom eLearning</Link></li>
               <li><Link to="/solutions" className="hover:text-cyan transition-colors">Gamified Engine</Link></li>
               <li><Link to="/solutions" className="hover:text-cyan transition-colors">Compliance Training</Link></li>

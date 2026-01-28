@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 const solutions = [
   {
     icon: Building2,
-    title: "Corporate Upskilling",
+    title: "Corporate Upskilling/Reskilling",
     stat: "500+",
     statLabel: "Courses",
     description: "AI & digital skills training with blockchain-verified certificates",
