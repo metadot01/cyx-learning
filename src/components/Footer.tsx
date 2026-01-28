@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, MapPin, FileText, BookOpen, GraduationCap, ArrowUpRight, Shield, Award, Sparkles, ExternalLink } from "lucide-react";
+import { Mail, MapPin, FileText, BookOpen, GraduationCap, ArrowUpRight, Shield, Award } from "lucide-react";
 import { useState } from "react";
 import ContactDialog from "@/components/ContactDialog";
 
@@ -96,46 +96,6 @@ const Footer = () => {
         {/* Top Accent Line */}
         <div className="h-px bg-gradient-to-r from-transparent via-cyan/50 to-transparent" />
 
-        {/* Newsletter/CTA Section */}
-        <div className="relative border-b border-white/5">
-          <div className="section-container py-12 sm:py-16">
-            <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-16">
-              <div className="text-center lg:text-left max-w-xl">
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gradient-to-r from-cyan/20 to-emerald/20 border border-cyan/20 mb-4">
-                  <Sparkles className="w-4 h-4 text-cyan" />
-                  <span className="text-xs font-semibold text-cyan">Ready to Transform?</span>
-                </div>
-                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3">
-                  Start Your Learning Journey Today
-                </h3>
-                <p className="text-white/60">
-                  Connect with our team to discover how AI-powered learning can transform your organization.
-                </p>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <button
-                  onClick={() => setContactOpen(true)}
-                  className="group relative px-8 py-4 rounded-2xl bg-gradient-to-r from-emerald to-cyan font-semibold text-white shadow-lg shadow-emerald/25 hover:shadow-emerald/40 transition-all duration-300 hover:scale-105 overflow-hidden"
-                >
-                  <span className="relative z-10 flex items-center justify-center gap-2">
-                    Get Started
-                    <ArrowUpRight className="w-5 h-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                  </span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-cyan to-emerald opacity-0 group-hover:opacity-100 transition-opacity" />
-                </button>
-                <a
-                  href="https://cyxorlearning.com/courses/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-8 py-4 rounded-2xl border border-white/20 font-semibold text-white hover:bg-white/5 hover:border-white/30 transition-all duration-300 flex items-center justify-center gap-2"
-                >
-                  Browse Courses
-                  <ExternalLink className="w-4 h-4" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
 
         {/* Main Footer Content */}
         <div className="section-container py-14 sm:py-20 relative">
@@ -143,22 +103,22 @@ const Footer = () => {
             {/* Column 1: Brand & Contact - Takes 2 columns on large screens */}
             <div className="col-span-2 sm:col-span-3 lg:col-span-2">
               <div className="flex items-center mb-5">
-                <span className="text-2xl sm:text-3xl font-bold tracking-tight bg-gradient-to-r from-cyan to-cyan/80 bg-clip-text text-transparent">CYXOR</span>
-                <span className="text-2xl sm:text-3xl font-bold ml-2 bg-gradient-to-r from-emerald to-emerald/80 bg-clip-text text-transparent">Learning</span>
+                <span className="text-2xl sm:text-3xl font-bold tracking-tight text-cyan">CYXOR</span>
+                <span className="text-2xl sm:text-3xl font-bold ml-2 text-emerald">Learning</span>
               </div>
-              <p className="text-sm text-white/50 mb-8 leading-relaxed max-w-sm">
+              <p className="text-sm text-white/70 mb-8 leading-relaxed max-w-sm">
                 Interactive AI Learning You Can Trust. Blockchain-verified certificates, AI-powered personalization, and gamified engagement.
               </p>
               
               {/* Contact Info */}
               <div className="space-y-4 mb-8">
-                <a href="mailto:contact@cyxorlearning.com" className="flex items-center gap-3 text-sm text-white/60 hover:text-cyan transition-all duration-300 group">
+                <a href="mailto:contact@cyxorlearning.com" className="flex items-center gap-3 text-sm text-white/80 hover:text-cyan transition-all duration-300 group">
                   <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan/20 to-cyan/5 border border-cyan/20 flex items-center justify-center group-hover:border-cyan/40 group-hover:scale-110 transition-all duration-300">
                     <Mail className="w-4 h-4 text-cyan" />
                   </div>
                   <span className="group-hover:translate-x-1 transition-transform">contact@cyxorlearning.com</span>
                 </a>
-                <div className="flex items-center gap-3 text-sm text-white/50">
+                <div className="flex items-center gap-3 text-sm text-white/70">
                   <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald/20 to-emerald/5 border border-emerald/20 flex items-center justify-center">
                     <MapPin className="w-4 h-4 text-emerald" />
                   </div>
@@ -196,13 +156,13 @@ const Footer = () => {
                         href={link.href} 
                         target="_blank" 
                         rel="noopener noreferrer" 
-                        className="text-sm text-white/50 hover:text-cyan transition-colors inline-flex items-center gap-1.5 group"
+                        className="text-sm text-white/70 hover:text-cyan transition-colors inline-flex items-center gap-1.5 group"
                       >
                         <span className="group-hover:translate-x-1 transition-transform">{link.label}</span>
                         <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                       </a>
                     ) : (
-                      <Link to={link.href} className="text-sm text-white/50 hover:text-cyan transition-colors inline-block hover:translate-x-1 duration-300">
+                      <Link to={link.href} className="text-sm text-white/70 hover:text-cyan transition-colors inline-block hover:translate-x-1 duration-300">
                         {link.label}
                       </Link>
                     )}
@@ -219,7 +179,7 @@ const Footer = () => {
               <ul className="space-y-3.5">
                 {resourceLinks.map((link) => (
                   <li key={link.label}>
-                    <Link to={link.href} className="text-sm text-white/50 hover:text-cyan transition-colors inline-block hover:translate-x-1 duration-300">
+                    <Link to={link.href} className="text-sm text-white/70 hover:text-cyan transition-colors inline-block hover:translate-x-1 duration-300">
                       {link.label}
                     </Link>
                   </li>
@@ -227,7 +187,7 @@ const Footer = () => {
                 <li>
                   <button 
                     onClick={() => setContactOpen(true)}
-                    className="text-sm text-white/50 hover:text-cyan transition-colors text-left hover:translate-x-1 duration-300 inline-block"
+                    className="text-sm text-white/70 hover:text-cyan transition-colors text-left hover:translate-x-1 duration-300 inline-block"
                   >
                     Contact Us
                   </button>
@@ -243,7 +203,7 @@ const Footer = () => {
               <ul className="space-y-3.5">
                 {companyLinks.map((link) => (
                   <li key={link.label}>
-                    <Link to={link.href} className="text-sm text-white/50 hover:text-cyan transition-colors inline-block hover:translate-x-1 duration-300">
+                    <Link to={link.href} className="text-sm text-white/70 hover:text-cyan transition-colors inline-block hover:translate-x-1 duration-300">
                       {link.label}
                     </Link>
                   </li>
@@ -259,7 +219,7 @@ const Footer = () => {
               <ul className="space-y-3.5">
                 {legalLinks.map((link) => (
                   <li key={link.label}>
-                    <Link to={link.href} className="text-sm text-white/50 hover:text-cyan transition-colors inline-block hover:translate-x-1 duration-300">
+                    <Link to={link.href} className="text-sm text-white/70 hover:text-cyan transition-colors inline-block hover:translate-x-1 duration-300">
                       {link.label}
                     </Link>
                   </li>
