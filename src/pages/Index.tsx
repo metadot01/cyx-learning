@@ -9,7 +9,7 @@ import FeaturedInstructor from "@/components/FeaturedInstructor";
 import TransformCTA from "@/components/TransformCTA";
 import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
-
+import Chatbot from "@/components/Chatbot";
 
 const Index = () => {
   return (
@@ -27,6 +27,7 @@ const Index = () => {
       </main>
       <Footer />
       <BackToTop />
+      <Chatbot />
     </div>
   );
 };
