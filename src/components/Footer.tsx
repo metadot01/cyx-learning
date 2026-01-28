@@ -79,59 +79,10 @@ const Footer = () => {
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan/5 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-emerald/5 rounded-full blur-3xl pointer-events-none" />
         
-        {/* Resources Section - Featured */}
-        <div className="relative border-b border-white/10">
-          <div className="section-container py-10 sm:py-14 lg:py-16">
-            <div className="text-center mb-8 sm:mb-10">
-              <span className="inline-block px-3 py-1 text-xs font-semibold text-cyan bg-cyan/10 rounded-full mb-3">
-                RESOURCES
-              </span>
-              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-2">
-                Learning Resources & Support
-              </h3>
-              <p className="text-sm sm:text-base text-white/60 max-w-xl mx-auto">
-                Access case studies, insights, and connect with our expert instructors
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto">
-              {resourceLinks.map((resource) => {
-                const Icon = resource.icon;
-                return (
-                  <Link
-                    key={resource.label}
-                    to={resource.href}
-                    className="group relative p-5 sm:p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-cyan/30 transition-all duration-300"
-                  >
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan/20 to-emerald/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                      <Icon className="w-6 h-6 text-cyan" />
-                    </div>
-                    <h4 className="font-semibold text-white mb-1 group-hover:text-cyan transition-colors flex items-center gap-2">
-                      {resource.label}
-                      <ArrowUpRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </h4>
-                    <p className="text-sm text-white/60">{resource.description}</p>
-                  </Link>
-                );
-              })}
-            </div>
-            
-            {/* Contact CTA */}
-            <div className="mt-8 text-center">
-              <button
-                onClick={() => setContactOpen(true)}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald hover:bg-emerald/90 text-white font-semibold transition-all hover:scale-105"
-              >
-                <Phone className="w-4 h-4" />
-                Contact Us
-              </button>
-            </div>
-          </div>
-        </div>
 
         {/* Main Footer Content */}
         <div className="section-container py-10 sm:py-14 lg:py-16 relative">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10 lg:gap-16">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 sm:gap-10 lg:gap-12">
             {/* Column 1: Brand & Contact */}
             <div className="col-span-2 md:col-span-1">
               <div className="flex items-center mb-4">
@@ -204,14 +155,14 @@ const Footer = () => {
               </ul>
             </div>
 
-            {/* Column 3: Company */}
+            {/* Column 3: Resources */}
             <div>
               <h4 className="font-bold text-white mb-5 text-sm uppercase tracking-wider flex items-center gap-2">
-                <div className="w-1.5 h-1.5 rounded-full bg-emerald" />
-                Company
+                <div className="w-1.5 h-1.5 rounded-full bg-violet-500" />
+                Resources
               </h4>
               <ul className="space-y-3 text-sm text-white/70">
-                {companyLinks.map((link) => (
+                {resourceLinks.map((link) => (
                   <li key={link.label}>
                     <Link to={link.href} className="hover:text-cyan transition-colors">
                       {link.label}
@@ -229,7 +180,24 @@ const Footer = () => {
               </ul>
             </div>
 
-            {/* Column 4: Legal */}
+            {/* Column 4: Company */}
+            <div>
+              <h4 className="font-bold text-white mb-5 text-sm uppercase tracking-wider flex items-center gap-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-emerald" />
+                Company
+              </h4>
+              <ul className="space-y-3 text-sm text-white/70">
+                {companyLinks.map((link) => (
+                  <li key={link.label}>
+                    <Link to={link.href} className="hover:text-cyan transition-colors">
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Column 5: Legal */}
             <div>
               <h4 className="font-bold text-white mb-5 text-sm uppercase tracking-wider flex items-center gap-2">
                 <div className="w-1.5 h-1.5 rounded-full bg-amber-500" />
