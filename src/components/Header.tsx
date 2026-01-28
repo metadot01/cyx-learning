@@ -38,7 +38,7 @@ import ContactDialog from "@/components/ContactDialog";
 
 const navItems = [
   {
-    label: "Upskill",
+    label: "Upskill/Reskill",
     href: "/solutions#upskill",
     description: "Employee Development & Growth",
     icon: TrendingUp,
