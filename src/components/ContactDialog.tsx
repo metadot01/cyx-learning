@@ -103,17 +103,9 @@ const ContactDialog = ({ trigger, open: controlledOpen, onOpenChange }: ContactD
     setOpen(false);
   };
 
-  return (
-    <Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger asChild>
-        {trigger || (
-          <Button variant="hero" size="default">
-            <MessageCircle className="w-4 h-4 mr-2" />
-            Start Conversation
-          </Button>
-        )}
-      </DialogTrigger>
-      <DialogContent className="sm:max-w-lg bg-navy border-white/10">
+  // When controlled externally (open/onOpenChange props), don't render the trigger
+  const dialogContent = (
+    <DialogContent className="sm:max-w-lg bg-navy border-white/10">
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold text-white text-center">
             Enterprise <span className="text-emerald">Inquiries</span>
@@ -214,11 +206,31 @@ const ContactDialog = ({ trigger, open: controlledOpen, onOpenChange }: ContactD
             )}
           </Button>
 
-          <p className="text-center text-white/50 text-xs">
-            We typically respond within 24 hours on business days.
-          </p>
         </form>
       </DialogContent>
+    );
+
+  // If controlled externally, just render the dialog without trigger
+  if (isControlled) {
+    return (
+      <Dialog open={open} onOpenChange={setOpen}>
+        {dialogContent}
+      </Dialog>
+    );
+  }
+
+  // Otherwise render with trigger button
+  return (
+    <Dialog open={open} onOpenChange={setOpen}>
+      <DialogTrigger asChild>
+        {trigger || (
+          <Button variant="hero" size="default">
+            <MessageCircle className="w-4 h-4 mr-2" />
+            Start Conversation
+          </Button>
+        )}
+      </DialogTrigger>
+      {dialogContent}
     </Dialog>
   );
 };
