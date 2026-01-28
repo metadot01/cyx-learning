@@ -134,7 +134,7 @@ const Chatbot = () => {
       <button
         onClick={() => setIsOpen(true)}
         className={cn(
-          "fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-cyan text-white shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group",
+          "fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-gradient-to-r from-cyan to-emerald text-white shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group",
           isOpen && "scale-0 opacity-0"
         )}
         aria-label="Open chat"
@@ -153,7 +153,7 @@ const Chatbot = () => {
         )}
       >
         {/* Header */}
-        <div className="flex items-center justify-between px-4 py-3 bg-cyan text-white">
+        <div className="flex items-center justify-between px-4 py-3 bg-gradient-to-r from-cyan to-emerald text-white">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center shadow-lg">
               <Bot className="w-5 h-5 text-white" />
