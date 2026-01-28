@@ -61,61 +61,61 @@ const features = [
 
 const WhyChooseCyxor = () => {
   return (
-    <section className="py-20 lg:py-28 relative overflow-hidden">
+    <section className="py-16 sm:py-20 lg:py-28 relative overflow-hidden">
       {/* Animated gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-ocean/5 via-background to-cyan/5" />
       <div className="absolute inset-0 circuit-pattern" />
       
-      {/* Decorative elements */}
-      <div className="absolute top-10 right-10 w-64 h-64 bg-emerald/10 rounded-full blur-3xl animate-pulse-slow" />
-      <div className="absolute bottom-10 left-10 w-80 h-80 bg-cyan/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '1s' }} />
+      {/* Decorative elements - hidden on mobile for performance */}
+      <div className="hidden sm:block absolute top-10 right-10 w-64 h-64 bg-emerald/10 rounded-full blur-3xl animate-pulse-slow" />
+      <div className="hidden sm:block absolute bottom-10 left-10 w-80 h-80 bg-cyan/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '1s' }} />
       
-      <div className="section-container relative z-10">
-        <AnimatedSection className="text-center mb-12 lg:mb-16">
-          <span className="inline-block text-white font-bold text-sm tracking-wider uppercase mb-4 px-4 py-2 bg-ocean rounded-full">
+      <div className="section-container relative z-10 px-4 sm:px-6 lg:px-8">
+        <AnimatedSection className="text-center mb-10 sm:mb-12 lg:mb-16">
+          <span className="inline-block text-white font-bold text-xs sm:text-sm tracking-wider uppercase mb-3 sm:mb-4 px-3 sm:px-4 py-1.5 sm:py-2 bg-ocean rounded-full">
             Platform Capabilities
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground mt-4 mb-4 leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground mt-3 sm:mt-4 mb-3 sm:mb-4 leading-tight px-2">
             Why Organizations Choose{" "}
             <span className="text-ocean">CYXOR</span>{" "}
             <span className="text-emerald">Learning</span>
           </h2>
-          <p className="text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed px-4">
             Six powerful capabilities that transform how your team learns, verifies, and grows.
           </p>
         </AnimatedSection>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto">
           {features.map((feature, index) => (
             <AnimatedSection
               key={feature.title}
               delay={index * 100}
               animation="fade-up"
             >
-              <div className={`group relative p-6 rounded-2xl bg-card/80 backdrop-blur-sm border ${feature.borderColor} hover:border-cyan/40 transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1 h-full`}>
+              <div className={`group relative p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-card/80 backdrop-blur-sm border ${feature.borderColor} hover:border-cyan/40 transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1 h-full`}>
                 {/* Icon */}
-                <div className={`w-14 h-14 rounded-xl ${feature.bgColor} flex items-center justify-center mb-4 border ${feature.borderColor} group-hover:scale-110 transition-transform`}>
-                  <feature.icon className={`w-7 h-7 ${feature.color}`} />
+                <div className={`w-10 h-10 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl ${feature.bgColor} flex items-center justify-center mb-3 sm:mb-4 border ${feature.borderColor} group-hover:scale-110 transition-transform`}>
+                  <feature.icon className={`w-5 h-5 sm:w-7 sm:h-7 ${feature.color}`} />
                 </div>
 
                 {/* Content */}
-                <h3 className="text-lg font-bold text-foreground mb-1">
+                <h3 className="text-base sm:text-lg font-bold text-foreground mb-1">
                   {feature.title}
                 </h3>
                 {feature.highlight && (
-                  <p className={`text-xs font-bold ${feature.color} mb-2`}>
+                  <p className={`text-[10px] sm:text-xs font-bold ${feature.color} mb-2`}>
                     {feature.highlight}
                   </p>
                 )}
-                <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+                <p className="text-xs sm:text-sm text-muted-foreground mb-3 sm:mb-4 leading-relaxed">
                   {feature.description}
                 </p>
                 
                 {/* Items */}
-                <div className="space-y-2">
+                <div className="space-y-1.5 sm:space-y-2">
                   {feature.items.slice(0, 3).map((item) => (
-                    <div key={item} className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <CheckCircle className={`w-4 h-4 ${feature.color} flex-shrink-0`} />
+                    <div key={item} className="flex items-center gap-2 text-xs sm:text-sm text-muted-foreground">
+                      <CheckCircle className={`w-3.5 h-3.5 sm:w-4 sm:h-4 ${feature.color} flex-shrink-0`} />
                       {item}
                     </div>
                   ))}

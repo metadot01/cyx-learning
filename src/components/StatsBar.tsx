@@ -42,25 +42,25 @@ const stats = [
 
 const StatsBar = () => {
   return (
-    <section className="py-10 lg:py-14 bg-background relative">
+    <section className="py-8 sm:py-10 lg:py-14 bg-background relative">
       <div className="absolute inset-0 bg-gradient-to-r from-ocean/5 via-transparent to-emerald/5" />
-      <div className="section-container relative z-10">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+      <div className="section-container relative z-10 px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
           {stats.map((stat, index) => (
             <AnimatedSection
               key={stat.label}
               delay={index * 80}
               animation="fade-up"
             >
-              <div className={`text-center p-4 lg:p-6 rounded-2xl ${stat.bgColor} border ${stat.borderColor} hover:shadow-md transition-all`}>
-                <stat.icon className={`w-6 h-6 ${stat.color} mx-auto mb-2`} />
-                <div className={`text-2xl sm:text-3xl lg:text-4xl font-extrabold ${stat.color} mb-1`}>
+              <div className={`text-center p-3 sm:p-4 lg:p-6 rounded-xl sm:rounded-2xl ${stat.bgColor} border ${stat.borderColor} hover:shadow-md transition-all`}>
+                <stat.icon className={`w-5 h-5 sm:w-6 sm:h-6 ${stat.color} mx-auto mb-1.5 sm:mb-2`} />
+                <div className={`text-xl sm:text-2xl lg:text-4xl font-extrabold ${stat.color} mb-0.5 sm:mb-1`}>
                   {stat.value}
                 </div>
-                <div className="text-sm text-foreground font-semibold mb-0.5">
+                <div className="text-xs sm:text-sm text-foreground font-semibold mb-0 sm:mb-0.5">
                   {stat.label}
                 </div>
-                <div className="text-xs text-muted-foreground">
+                <div className="text-[10px] sm:text-xs text-muted-foreground">
                   {stat.sublabel}
                 </div>
               </div>
