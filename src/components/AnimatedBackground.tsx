@@ -68,12 +68,16 @@ const AnimatedBackground = () => {
         const pulse = Math.sin(time * this.pulseSpeed + this.pulseOffset) * 0.3 + 0.7;
         const currentOpacity = this.opacity * pulse;
         const currentSize = this.size * (0.8 + pulse * 0.4);
+        
+        // Alternate between cyan (CYXOR) and emerald (Learning) colors
+        const useCyan = Math.random() > 0.5;
+        const particleColor = useCyan ? "0, 217, 255" : "0, 200, 150";
 
         // Simplified glow on mobile - just core particle
         if (isMobile) {
           ctx!.beginPath();
           ctx!.arc(this.x, this.y, currentSize, 0, Math.PI * 2);
-          ctx!.fillStyle = `rgba(0, 217, 255, ${currentOpacity})`;
+          ctx!.fillStyle = `rgba(${particleColor}, ${currentOpacity})`;
           ctx!.fill();
         } else {
           // Full glow effect on desktop
@@ -81,9 +85,9 @@ const AnimatedBackground = () => {
             this.x, this.y, 0,
             this.x, this.y, currentSize * 3
           );
-          gradient.addColorStop(0, `rgba(0, 217, 255, ${currentOpacity})`);
-          gradient.addColorStop(0.5, `rgba(0, 217, 255, ${currentOpacity * 0.3})`);
-          gradient.addColorStop(1, `rgba(0, 217, 255, 0)`);
+          gradient.addColorStop(0, `rgba(${particleColor}, ${currentOpacity})`);
+          gradient.addColorStop(0.5, `rgba(${particleColor}, ${currentOpacity * 0.3})`);
+          gradient.addColorStop(1, `rgba(${particleColor}, 0)`);
 
           ctx!.beginPath();
           ctx!.arc(this.x, this.y, currentSize * 3, 0, Math.PI * 2);
@@ -93,7 +97,7 @@ const AnimatedBackground = () => {
           // Core particle
           ctx!.beginPath();
           ctx!.arc(this.x, this.y, currentSize, 0, Math.PI * 2);
-          ctx!.fillStyle = `rgba(0, 217, 255, ${currentOpacity})`;
+          ctx!.fillStyle = `rgba(${particleColor}, ${currentOpacity})`;
           ctx!.fill();
         }
       }
@@ -119,11 +123,14 @@ const AnimatedBackground = () => {
 
           if (distance < maxDistance) {
             const baseOpacity = (1 - distance / maxDistance) * 0.2;
+            // Gradient line from cyan to emerald
             const pulse = Math.sin(time * 0.002 + i * 0.1) * 0.5 + 0.5;
             const opacity = baseOpacity * (0.5 + pulse * 0.5);
+            // Alternate between cyan and emerald for connections
+            const lineColor = (i + j) % 2 === 0 ? "0, 217, 255" : "0, 200, 150";
             
             ctx!.beginPath();
-            ctx!.strokeStyle = `rgba(0, 217, 255, ${opacity})`;
+            ctx!.strokeStyle = `rgba(${lineColor}, ${opacity})`;
             ctx!.lineWidth = 1;
             ctx!.moveTo(particles[i].x, particles[i].y);
             ctx!.lineTo(particles[j].x, particles[j].y);
@@ -133,14 +140,14 @@ const AnimatedBackground = () => {
       }
     };
 
-    // Floating orbs - simplified on mobile
+    // Floating orbs - CYXOR (cyan) and Learning (emerald) brand colors
     const orbs = isMobile ? [
-      { x: 0.3, y: 0.4, radius: 120, color: "0, 217, 255", speed: 0.0003 },
-      { x: 0.7, y: 0.7, radius: 100, color: "0, 200, 150", speed: 0.0002 },
+      { x: 0.3, y: 0.4, radius: 120, color: "0, 217, 255", speed: 0.0003 },  // Cyan - CYXOR
+      { x: 0.7, y: 0.7, radius: 100, color: "0, 200, 150", speed: 0.0002 },  // Emerald - Learning
     ] : [
-      { x: 0.2, y: 0.3, radius: 200, color: "0, 200, 150", speed: 0.0005 },
-      { x: 0.8, y: 0.6, radius: 250, color: "0, 217, 255", speed: 0.0007 },
-      { x: 0.5, y: 0.8, radius: 180, color: "255, 183, 3", speed: 0.0004 },
+      { x: 0.2, y: 0.3, radius: 200, color: "0, 200, 150", speed: 0.0005 },  // Emerald - Learning
+      { x: 0.8, y: 0.6, radius: 250, color: "0, 217, 255", speed: 0.0007 },  // Cyan - CYXOR
+      { x: 0.5, y: 0.8, radius: 180, color: "0, 200, 150", speed: 0.0004 },  // Emerald - Learning
     ];
 
     const drawOrbs = (time: number) => {
