@@ -1,7 +1,9 @@
 import { useEffect, useRef } from "react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const AnimatedBackground = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -51,9 +53,10 @@ const AnimatedBackground = () => {
         this.x += this.speedX;
         this.y += this.speedY;
 
-        // Add wave motion
-        this.x += Math.sin(time * 0.001 + this.pulseOffset) * 0.2;
-        this.y += Math.cos(time * 0.0015 + this.pulseOffset) * 0.15;
+        // Add wave motion - reduced on mobile
+        const waveMultiplier = isMobile ? 0.5 : 1;
+        this.x += Math.sin(time * 0.001 + this.pulseOffset) * 0.2 * waveMultiplier;
+        this.y += Math.cos(time * 0.0015 + this.pulseOffset) * 0.15 * waveMultiplier;
 
         if (this.x > canvas!.width + 50) this.x = -50;
         if (this.x < -50) this.x = canvas!.width + 50;
@@ -66,35 +69,47 @@ const AnimatedBackground = () => {
         const currentOpacity = this.opacity * pulse;
         const currentSize = this.size * (0.8 + pulse * 0.4);
 
-        // Glow effect
-        const gradient = ctx!.createRadialGradient(
-          this.x, this.y, 0,
-          this.x, this.y, currentSize * 3
-        );
-        gradient.addColorStop(0, `rgba(0, 217, 255, ${currentOpacity})`);
-        gradient.addColorStop(0.5, `rgba(0, 217, 255, ${currentOpacity * 0.3})`);
-        gradient.addColorStop(1, `rgba(0, 217, 255, 0)`);
+        // Simplified glow on mobile - just core particle
+        if (isMobile) {
+          ctx!.beginPath();
+          ctx!.arc(this.x, this.y, currentSize, 0, Math.PI * 2);
+          ctx!.fillStyle = `rgba(0, 217, 255, ${currentOpacity})`;
+          ctx!.fill();
+        } else {
+          // Full glow effect on desktop
+          const gradient = ctx!.createRadialGradient(
+            this.x, this.y, 0,
+            this.x, this.y, currentSize * 3
+          );
+          gradient.addColorStop(0, `rgba(0, 217, 255, ${currentOpacity})`);
+          gradient.addColorStop(0.5, `rgba(0, 217, 255, ${currentOpacity * 0.3})`);
+          gradient.addColorStop(1, `rgba(0, 217, 255, 0)`);
 
-        ctx!.beginPath();
-        ctx!.arc(this.x, this.y, currentSize * 3, 0, Math.PI * 2);
-        ctx!.fillStyle = gradient;
-        ctx!.fill();
+          ctx!.beginPath();
+          ctx!.arc(this.x, this.y, currentSize * 3, 0, Math.PI * 2);
+          ctx!.fillStyle = gradient;
+          ctx!.fill();
 
-        // Core particle
-        ctx!.beginPath();
-        ctx!.arc(this.x, this.y, currentSize, 0, Math.PI * 2);
-        ctx!.fillStyle = `rgba(0, 217, 255, ${currentOpacity})`;
-        ctx!.fill();
+          // Core particle
+          ctx!.beginPath();
+          ctx!.arc(this.x, this.y, currentSize, 0, Math.PI * 2);
+          ctx!.fillStyle = `rgba(0, 217, 255, ${currentOpacity})`;
+          ctx!.fill();
+        }
       }
     }
 
-    // Create particles
-    const particleCount = Math.min(60, Math.floor((canvas.width * canvas.height) / 20000));
+    // Fewer particles on mobile for better performance
+    const baseCount = isMobile ? 15 : 60;
+    const particleCount = Math.min(baseCount, Math.floor((canvas.width * canvas.height) / (isMobile ? 40000 : 20000)));
     for (let i = 0; i < particleCount; i++) {
       particles.push(new Particle());
     }
 
     const connectParticles = (time: number) => {
+      // Skip particle connections on mobile for performance
+      if (isMobile) return;
+      
       const maxDistance = 150;
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
@@ -118,8 +133,11 @@ const AnimatedBackground = () => {
       }
     };
 
-    // Floating orbs
-    const orbs = [
+    // Floating orbs - simplified on mobile
+    const orbs = isMobile ? [
+      { x: 0.3, y: 0.4, radius: 120, color: "0, 217, 255", speed: 0.0003 },
+      { x: 0.7, y: 0.7, radius: 100, color: "0, 200, 150", speed: 0.0002 },
+    ] : [
       { x: 0.2, y: 0.3, radius: 200, color: "0, 200, 150", speed: 0.0005 },
       { x: 0.8, y: 0.6, radius: 250, color: "0, 217, 255", speed: 0.0007 },
       { x: 0.5, y: 0.8, radius: 180, color: "255, 183, 3", speed: 0.0004 },
@@ -127,13 +145,15 @@ const AnimatedBackground = () => {
 
     const drawOrbs = (time: number) => {
       orbs.forEach((orb, i) => {
-        const x = canvas!.width * orb.x + Math.sin(time * orb.speed + i) * 50;
-        const y = canvas!.height * orb.y + Math.cos(time * orb.speed * 1.3 + i) * 30;
+        const moveAmount = isMobile ? 20 : 50;
+        const x = canvas!.width * orb.x + Math.sin(time * orb.speed + i) * moveAmount;
+        const y = canvas!.height * orb.y + Math.cos(time * orb.speed * 1.3 + i) * (moveAmount * 0.6);
         const pulse = Math.sin(time * 0.001 + i) * 0.2 + 0.8;
+        const orbOpacity = isMobile ? 0.05 : 0.08;
         
         const gradient = ctx!.createRadialGradient(x, y, 0, x, y, orb.radius * pulse);
-        gradient.addColorStop(0, `rgba(${orb.color}, 0.08)`);
-        gradient.addColorStop(0.5, `rgba(${orb.color}, 0.03)`);
+        gradient.addColorStop(0, `rgba(${orb.color}, ${orbOpacity})`);
+        gradient.addColorStop(0.5, `rgba(${orb.color}, ${orbOpacity * 0.4})`);
         gradient.addColorStop(1, `rgba(${orb.color}, 0)`);
         
         ctx!.fillStyle = gradient;
@@ -143,8 +163,18 @@ const AnimatedBackground = () => {
       });
     };
 
-    const animate = () => {
-      time += 16;
+    // Lower frame rate on mobile
+    let lastFrameTime = 0;
+    const frameInterval = isMobile ? 33 : 16; // ~30fps on mobile, ~60fps on desktop
+
+    const animate = (currentTime: number) => {
+      if (currentTime - lastFrameTime < frameInterval) {
+        animationFrameId = requestAnimationFrame(animate);
+        return;
+      }
+      lastFrameTime = currentTime;
+      
+      time += frameInterval;
       ctx!.clearRect(0, 0, canvas!.width, canvas!.height);
 
       // Draw floating orbs first (behind particles)
@@ -160,19 +190,19 @@ const AnimatedBackground = () => {
       animationFrameId = requestAnimationFrame(animate);
     };
 
-    animate();
+    animationFrameId = requestAnimationFrame(animate);
 
     return () => {
       window.removeEventListener("resize", resizeCanvas);
       cancelAnimationFrame(animationFrameId);
     };
-  }, []);
+  }, [isMobile]);
 
   return (
     <canvas
       ref={canvasRef}
       className="absolute inset-0 w-full h-full pointer-events-none"
-      style={{ opacity: 0.8 }}
+      style={{ opacity: isMobile ? 0.6 : 0.8 }}
     />
   );
 };
